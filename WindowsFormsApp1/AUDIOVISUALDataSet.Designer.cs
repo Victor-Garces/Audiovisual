@@ -24,7 +24,7 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class AUDIOVISUALDataSet : global::System.Data.DataSet {
         
-        private EmpleadoesDataTable tableEmpleadoes;
+        private EmpleadosDataTable tableEmpleados;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace WindowsFormsApp1 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Empleadoes"] != null)) {
-                    base.Tables.Add(new EmpleadoesDataTable(ds.Tables["Empleadoes"]));
+                if ((ds.Tables["Empleados"] != null)) {
+                    base.Tables.Add(new EmpleadosDataTable(ds.Tables["Empleados"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WindowsFormsApp1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EmpleadoesDataTable Empleadoes {
+        public EmpleadosDataTable Empleados {
             get {
-                return this.tableEmpleadoes;
+                return this.tableEmpleados;
             }
         }
         
@@ -152,8 +152,8 @@ namespace WindowsFormsApp1 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Empleadoes"] != null)) {
-                    base.Tables.Add(new EmpleadoesDataTable(ds.Tables["Empleadoes"]));
+                if ((ds.Tables["Empleados"] != null)) {
+                    base.Tables.Add(new EmpleadosDataTable(ds.Tables["Empleados"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEmpleadoes = ((EmpleadoesDataTable)(base.Tables["Empleadoes"]));
+            this.tableEmpleados = ((EmpleadosDataTable)(base.Tables["Empleados"]));
             if ((initTable == true)) {
-                if ((this.tableEmpleadoes != null)) {
-                    this.tableEmpleadoes.InitVars();
+                if ((this.tableEmpleados != null)) {
+                    this.tableEmpleados.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace WindowsFormsApp1 {
             this.Namespace = "http://tempuri.org/AUDIOVISUALDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEmpleadoes = new EmpleadoesDataTable();
-            base.Tables.Add(this.tableEmpleadoes);
+            this.tableEmpleados = new EmpleadosDataTable();
+            base.Tables.Add(this.tableEmpleados);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeEmpleadoes() {
+        private bool ShouldSerializeEmpleados() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace WindowsFormsApp1 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void EmpleadoesRowChangeEventHandler(object sender, EmpleadoesRowChangeEvent e);
+        public delegate void EmpleadosRowChangeEventHandler(object sender, EmpleadosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EmpleadoesDataTable : global::System.Data.TypedTableBase<EmpleadoesRow> {
+        public partial class EmpleadosDataTable : global::System.Data.TypedTableBase<EmpleadosRow> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -293,8 +293,8 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesDataTable() {
-                this.TableName = "Empleadoes";
+            public EmpleadosDataTable() {
+                this.TableName = "Empleados";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal EmpleadoesDataTable(global::System.Data.DataTable table) {
+            internal EmpleadosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +319,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected EmpleadoesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected EmpleadosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -383,34 +383,34 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRow this[int index] {
+            public EmpleadosRow this[int index] {
                 get {
-                    return ((EmpleadoesRow)(this.Rows[index]));
+                    return ((EmpleadosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event EmpleadoesRowChangeEventHandler EmpleadoesRowChanging;
+            public event EmpleadosRowChangeEventHandler EmpleadosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event EmpleadoesRowChangeEventHandler EmpleadoesRowChanged;
+            public event EmpleadosRowChangeEventHandler EmpleadosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event EmpleadoesRowChangeEventHandler EmpleadoesRowDeleting;
+            public event EmpleadosRowChangeEventHandler EmpleadosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event EmpleadoesRowChangeEventHandler EmpleadoesRowDeleted;
+            public event EmpleadosRowChangeEventHandler EmpleadosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddEmpleadoesRow(EmpleadoesRow row) {
+            public void AddEmpleadosRow(EmpleadosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRow AddEmpleadoesRow(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado) {
-                EmpleadoesRow rowEmpleadoesRow = ((EmpleadoesRow)(this.NewRow()));
+            public EmpleadosRow AddEmpleadosRow(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado) {
+                EmpleadosRow rowEmpleadosRow = ((EmpleadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nombre,
@@ -418,22 +418,22 @@ namespace WindowsFormsApp1 {
                         Tanda,
                         FechaIngreso,
                         Estado};
-                rowEmpleadoesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEmpleadoesRow);
-                return rowEmpleadoesRow;
+                rowEmpleadosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEmpleadosRow);
+                return rowEmpleadosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRow FindById(int Id) {
-                return ((EmpleadoesRow)(this.Rows.Find(new object[] {
+            public EmpleadosRow FindById(int Id) {
+                return ((EmpleadosRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EmpleadoesDataTable cln = ((EmpleadoesDataTable)(base.Clone()));
+                EmpleadosDataTable cln = ((EmpleadosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,7 +441,7 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EmpleadoesDataTable();
+                return new EmpleadosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -487,28 +487,28 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRow NewEmpleadoesRow() {
-                return ((EmpleadoesRow)(this.NewRow()));
+            public EmpleadosRow NewEmpleadosRow() {
+                return ((EmpleadosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EmpleadoesRow(builder);
+                return new EmpleadosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EmpleadoesRow);
+                return typeof(EmpleadosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EmpleadoesRowChanged != null)) {
-                    this.EmpleadoesRowChanged(this, new EmpleadoesRowChangeEvent(((EmpleadoesRow)(e.Row)), e.Action));
+                if ((this.EmpleadosRowChanged != null)) {
+                    this.EmpleadosRowChanged(this, new EmpleadosRowChangeEvent(((EmpleadosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -516,8 +516,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EmpleadoesRowChanging != null)) {
-                    this.EmpleadoesRowChanging(this, new EmpleadoesRowChangeEvent(((EmpleadoesRow)(e.Row)), e.Action));
+                if ((this.EmpleadosRowChanging != null)) {
+                    this.EmpleadosRowChanging(this, new EmpleadosRowChangeEvent(((EmpleadosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -525,8 +525,8 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EmpleadoesRowDeleted != null)) {
-                    this.EmpleadoesRowDeleted(this, new EmpleadoesRowChangeEvent(((EmpleadoesRow)(e.Row)), e.Action));
+                if ((this.EmpleadosRowDeleted != null)) {
+                    this.EmpleadosRowDeleted(this, new EmpleadosRowChangeEvent(((EmpleadosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -534,14 +534,14 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EmpleadoesRowDeleting != null)) {
-                    this.EmpleadoesRowDeleting(this, new EmpleadoesRowChangeEvent(((EmpleadoesRow)(e.Row)), e.Action));
+                if ((this.EmpleadosRowDeleting != null)) {
+                    this.EmpleadosRowDeleting(this, new EmpleadosRowChangeEvent(((EmpleadosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveEmpleadoesRow(EmpleadoesRow row) {
+            public void RemoveEmpleadosRow(EmpleadosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -568,7 +568,7 @@ namespace WindowsFormsApp1 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EmpleadoesDataTable";
+                attribute2.FixedValue = "EmpleadosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -612,25 +612,25 @@ namespace WindowsFormsApp1 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EmpleadoesRow : global::System.Data.DataRow {
+        public partial class EmpleadosRow : global::System.Data.DataRow {
             
-            private EmpleadoesDataTable tableEmpleadoes;
+            private EmpleadosDataTable tableEmpleados;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal EmpleadoesRow(global::System.Data.DataRowBuilder rb) : 
+            internal EmpleadosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEmpleadoes = ((EmpleadoesDataTable)(this.Table));
+                this.tableEmpleados = ((EmpleadosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableEmpleadoes.IdColumn]));
+                    return ((int)(this[this.tableEmpleados.IdColumn]));
                 }
                 set {
-                    this[this.tableEmpleadoes.IdColumn] = value;
+                    this[this.tableEmpleados.IdColumn] = value;
                 }
             }
             
@@ -639,14 +639,14 @@ namespace WindowsFormsApp1 {
             public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableEmpleadoes.NombreColumn]));
+                        return ((string)(this[this.tableEmpleados.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre\' in table \'Empleadoes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre\' in table \'Empleados\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmpleadoes.NombreColumn] = value;
+                    this[this.tableEmpleados.NombreColumn] = value;
                 }
             }
             
@@ -655,14 +655,14 @@ namespace WindowsFormsApp1 {
             public string Cedula {
                 get {
                     try {
-                        return ((string)(this[this.tableEmpleadoes.CedulaColumn]));
+                        return ((string)(this[this.tableEmpleados.CedulaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cedula\' in table \'Empleadoes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cedula\' in table \'Empleados\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmpleadoes.CedulaColumn] = value;
+                    this[this.tableEmpleados.CedulaColumn] = value;
                 }
             }
             
@@ -671,14 +671,14 @@ namespace WindowsFormsApp1 {
             public string Tanda {
                 get {
                     try {
-                        return ((string)(this[this.tableEmpleadoes.TandaColumn]));
+                        return ((string)(this[this.tableEmpleados.TandaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tanda\' in table \'Empleadoes\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Tanda\' in table \'Empleados\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmpleadoes.TandaColumn] = value;
+                    this[this.tableEmpleados.TandaColumn] = value;
                 }
             }
             
@@ -686,10 +686,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime FechaIngreso {
                 get {
-                    return ((global::System.DateTime)(this[this.tableEmpleadoes.FechaIngresoColumn]));
+                    return ((global::System.DateTime)(this[this.tableEmpleados.FechaIngresoColumn]));
                 }
                 set {
-                    this[this.tableEmpleadoes.FechaIngresoColumn] = value;
+                    this[this.tableEmpleados.FechaIngresoColumn] = value;
                 }
             }
             
@@ -697,47 +697,47 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Estado {
                 get {
-                    return ((bool)(this[this.tableEmpleadoes.EstadoColumn]));
+                    return ((bool)(this[this.tableEmpleados.EstadoColumn]));
                 }
                 set {
-                    this[this.tableEmpleadoes.EstadoColumn] = value;
+                    this[this.tableEmpleados.EstadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsNombreNull() {
-                return this.IsNull(this.tableEmpleadoes.NombreColumn);
+                return this.IsNull(this.tableEmpleados.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNombreNull() {
-                this[this.tableEmpleadoes.NombreColumn] = global::System.Convert.DBNull;
+                this[this.tableEmpleados.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCedulaNull() {
-                return this.IsNull(this.tableEmpleadoes.CedulaColumn);
+                return this.IsNull(this.tableEmpleados.CedulaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCedulaNull() {
-                this[this.tableEmpleadoes.CedulaColumn] = global::System.Convert.DBNull;
+                this[this.tableEmpleados.CedulaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTandaNull() {
-                return this.IsNull(this.tableEmpleadoes.TandaColumn);
+                return this.IsNull(this.tableEmpleados.TandaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetTandaNull() {
-                this[this.tableEmpleadoes.TandaColumn] = global::System.Convert.DBNull;
+                this[this.tableEmpleados.TandaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -745,22 +745,22 @@ namespace WindowsFormsApp1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class EmpleadoesRowChangeEvent : global::System.EventArgs {
+        public class EmpleadosRowChangeEvent : global::System.EventArgs {
             
-            private EmpleadoesRow eventRow;
+            private EmpleadosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRowChangeEvent(EmpleadoesRow row, global::System.Data.DataRowAction action) {
+            public EmpleadosRowChangeEvent(EmpleadosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoesRow Row {
+            public EmpleadosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -788,7 +788,7 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class EmpleadoesTableAdapter : global::System.ComponentModel.Component {
+    public partial class EmpleadosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -802,7 +802,7 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public EmpleadoesTableAdapter() {
+        public EmpleadosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -899,7 +899,7 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Empleadoes";
+            tableMapping.DataSetTable = "Empleados";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("Cedula", "Cedula");
@@ -909,18 +909,18 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleadoes] WHERE (([Id] = @Original_Id) AND ([FechaIngreso] =" +
-                " @Original_FechaIngreso) AND ([Estado] = @Original_Estado))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleados] WHERE (([Id] = @Original_Id) AND ([FechaIngreso] = " +
+                "@Original_FechaIngreso) AND ([Estado] = @Original_Estado))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Empleadoes] ([Nombre], [Cedula], [Tanda], [FechaIngreso], [Est" +
-                "ado]) VALUES (@Nombre, @Cedula, @Tanda, @FechaIngreso, @Estado);\r\nSELECT Id, Nom" +
-                "bre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id = SCOPE_IDENT" +
-                "ITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Empleados] ([Nombre], [Cedula], [Tanda], [FechaIngreso], [Esta" +
+                "do]) VALUES (@Nombre, @Cedula, @Tanda, @FechaIngreso, @Estado);\r\nSELECT Id, Nomb" +
+                "re, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id = SCOPE_IDENTIT" +
+                "Y())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -929,8 +929,8 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Empleadoes] SET [Nombre] = @Nombre, [Cedula] = @Cedula, [Tanda] = @Tanda, [FechaIngreso] = @FechaIngreso, [Estado] = @Estado WHERE (([Id] = @Original_Id) AND ([FechaIngreso] = @Original_FechaIngreso) AND ([Estado] = @Original_Estado));
-SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Empleados] SET [Nombre] = @Nombre, [Cedula] = @Cedula, [Tanda] = @Tanda, [FechaIngreso] = @FechaIngreso, [Estado] = @Estado WHERE (([Id] = @Original_Id) AND ([FechaIngreso] = @Original_FechaIngreso) AND ([Estado] = @Original_Estado));
+SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -956,7 +956,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM dbo.Empleadoes";
+            this._commandCollection[0].CommandText = "SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM dbo.Empleados";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -964,7 +964,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AUDIOVISUALDataSet.EmpleadoesDataTable dataTable) {
+        public virtual int Fill(AUDIOVISUALDataSet.EmpleadosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -977,9 +977,9 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AUDIOVISUALDataSet.EmpleadoesDataTable GetData() {
+        public virtual AUDIOVISUALDataSet.EmpleadosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AUDIOVISUALDataSet.EmpleadoesDataTable dataTable = new AUDIOVISUALDataSet.EmpleadoesDataTable();
+            AUDIOVISUALDataSet.EmpleadosDataTable dataTable = new AUDIOVISUALDataSet.EmpleadosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -987,7 +987,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AUDIOVISUALDataSet.EmpleadoesDataTable dataTable) {
+        public virtual int Update(AUDIOVISUALDataSet.EmpleadosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -995,7 +995,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(AUDIOVISUALDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Empleadoes");
+            return this.Adapter.Update(dataSet, "Empleados");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1144,7 +1144,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         
         private UpdateOrderOption _updateOrder;
         
-        private EmpleadoesTableAdapter _empleadoesTableAdapter;
+        private EmpleadosTableAdapter _empleadosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1166,12 +1166,12 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public EmpleadoesTableAdapter EmpleadoesTableAdapter {
+        public EmpleadosTableAdapter EmpleadosTableAdapter {
             get {
-                return this._empleadoesTableAdapter;
+                return this._empleadosTableAdapter;
             }
             set {
-                this._empleadoesTableAdapter = value;
+                this._empleadosTableAdapter = value;
             }
         }
         
@@ -1194,9 +1194,9 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._empleadoesTableAdapter != null) 
-                            && (this._empleadoesTableAdapter.Connection != null))) {
-                    return this._empleadoesTableAdapter.Connection;
+                if (((this._empleadosTableAdapter != null) 
+                            && (this._empleadosTableAdapter.Connection != null))) {
+                    return this._empleadosTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1211,7 +1211,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._empleadoesTableAdapter != null)) {
+                if ((this._empleadosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1225,12 +1225,12 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(AUDIOVISUALDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._empleadoesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Empleadoes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._empleadosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Empleados.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._empleadoesTableAdapter.Update(updatedRows));
+                    result = (result + this._empleadosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1244,11 +1244,11 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(AUDIOVISUALDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._empleadoesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Empleadoes.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._empleadosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Empleados.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._empleadoesTableAdapter.Update(addedRows));
+                    result = (result + this._empleadosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1262,11 +1262,11 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(AUDIOVISUALDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._empleadoesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Empleadoes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._empleadosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Empleados.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._empleadoesTableAdapter.Update(deletedRows));
+                    result = (result + this._empleadosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1309,8 +1309,8 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._empleadoesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._empleadoesTableAdapter.Connection) == false))) {
+            if (((this._empleadosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._empleadosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1346,13 +1346,13 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._empleadoesTableAdapter != null)) {
-                    revertConnections.Add(this._empleadoesTableAdapter, this._empleadoesTableAdapter.Connection);
-                    this._empleadoesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._empleadoesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._empleadoesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._empleadoesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._empleadoesTableAdapter.Adapter);
+                if ((this._empleadosTableAdapter != null)) {
+                    revertConnections.Add(this._empleadosTableAdapter, this._empleadosTableAdapter.Connection);
+                    this._empleadosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._empleadosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._empleadosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._empleadosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._empleadosTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1413,9 +1413,9 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleadoes WHERE (Id
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._empleadoesTableAdapter != null)) {
-                    this._empleadoesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._empleadoesTableAdapter]));
-                    this._empleadoesTableAdapter.Transaction = null;
+                if ((this._empleadosTableAdapter != null)) {
+                    this._empleadosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._empleadosTableAdapter]));
+                    this._empleadosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

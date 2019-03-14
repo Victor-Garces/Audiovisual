@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.aUDIOVISUALDataSet = new WindowsFormsApp1.AUDIOVISUALDataSet();
-            this.empleadoesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.empleadoesTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters.EmpleadoesTableAdapter();
+            this.EmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EmpleadosTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters.EmpleadosTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,7 +57,7 @@
             this.tandaDataGridViewTextBoxColumn,
             this.fechaIngresoDataGridViewTextBoxColumn,
             this.estadoDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.empleadoesBindingSource;
+            this.dataGridView1.DataSource = this.EmpleadosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(94, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -69,14 +69,14 @@
             this.aUDIOVISUALDataSet.DataSetName = "AUDIOVISUALDataSet";
             this.aUDIOVISUALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // empleadoesBindingSource
+            // EmpleadosBindingSource
             // 
-            this.empleadoesBindingSource.DataMember = "Empleadoes";
-            this.empleadoesBindingSource.DataSource = this.aUDIOVISUALDataSet;
+            this.EmpleadosBindingSource.DataMember = "Empleados";
+            this.EmpleadosBindingSource.DataSource = this.aUDIOVISUALDataSet;
             // 
-            // empleadoesTableAdapter
+            // EmpleadosTableAdapter
             // 
-            this.empleadoesTableAdapter.ClearBeforeFill = true;
+            this.EmpleadosTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -148,7 +148,7 @@
             this.Load += new System.EventHandler(this.EmpleadoLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empleadoesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpleadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +158,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private AUDIOVISUALDataSet aUDIOVISUALDataSet;
-        private System.Windows.Forms.BindingSource empleadoesBindingSource;
-        private AUDIOVISUALDataSetTableAdapters.EmpleadoesTableAdapter empleadoesTableAdapter;
+        private System.Windows.Forms.BindingSource EmpleadosBindingSource;
+        private AUDIOVISUALDataSetTableAdapters.EmpleadosTableAdapter EmpleadosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;

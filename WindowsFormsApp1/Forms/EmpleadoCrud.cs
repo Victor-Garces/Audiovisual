@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp1.DataLayer;
+using WindowsFormsApp1.DataLayer.Enums;
 using WindowsFormsApp1.DataLayer.Models;
 
 namespace WindowsFormsApp1.Forms
@@ -10,6 +11,12 @@ namespace WindowsFormsApp1.Forms
         public EmpleadoCrud()
         {
             InitializeComponent();
+            comboBox1.DataSource = new[]
+            {
+                Tanda.Matutina,
+                Tanda.Vespertina,
+                Tanda.Nocturna
+            };
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -30,7 +37,7 @@ namespace WindowsFormsApp1.Forms
                 Estado = checkBox1.Checked,
                 FechaIngreso = dateTimePicker1.Value,
                 Nombre = textBox1.Text,
-                Tanda = textBox4.Text
+                Tanda = (Tanda) comboBox1.SelectedValue
             };
 
             if (ValidacionCedula(empleado.Cedula))
@@ -111,6 +118,11 @@ namespace WindowsFormsApp1.Forms
             var form1 = new Form1();
             form1.Show();
             Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

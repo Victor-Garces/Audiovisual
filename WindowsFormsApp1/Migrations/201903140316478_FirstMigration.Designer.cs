@@ -7,13 +7,13 @@ namespace WindowsFormsApp1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedEmpleadoTable : IMigrationMetadata
+    public sealed partial class FirstMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedEmpleadoTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201903132304227_AddedEmpleadoTable"; }
+            get { return "201903140316478_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source

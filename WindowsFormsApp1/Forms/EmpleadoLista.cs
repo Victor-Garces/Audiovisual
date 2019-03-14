@@ -19,8 +19,8 @@ namespace WindowsFormsApp1.Forms
 
         private void EmpleadoLista_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aUDIOVISUALDataSet.Empleadoes' table. You can move, or remove it, as needed.
-            this.empleadoesTableAdapter.Fill(this.aUDIOVISUALDataSet.Empleadoes);
+            // TODO: This line of code loads data into the 'aUDIOVISUALDataSet.Empleados' table. You can move, or remove it, as needed.
+            this.EmpleadosTableAdapter.Fill(this.aUDIOVISUALDataSet.Empleados);
 
         }
 
