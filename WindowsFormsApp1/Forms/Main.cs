@@ -25,5 +25,12 @@ namespace WindowsFormsApp1.Forms
             empleadoLista.Show();
             Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+            Hide();
+        }
     }
 }
