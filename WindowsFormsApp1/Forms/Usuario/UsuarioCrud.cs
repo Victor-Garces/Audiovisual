@@ -137,5 +137,12 @@ namespace WindowsFormsApp1.Forms.Usuario
                 txtCedula.Text = txtCedula.Text.Remove(txtCedula.Text.Length - 1);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+            Hide();
+        }
     }
 }
