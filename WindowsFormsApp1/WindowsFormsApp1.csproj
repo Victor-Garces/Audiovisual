@@ -115,6 +115,10 @@
     <Compile Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.Designer.cs">
       <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903161531313_AddedNoCarnetToUserTable.cs" />
+    <Compile Include="Migrations\201903161531313_AddedNoCarnetToUserTable.Designer.cs">
+      <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.resx">
       <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903161531313_AddedNoCarnetToUserTable.resx">
+      <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
