@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp1.DataLayer;
+using WindowsFormsApp1.DataLayer.Enums;
 
 namespace WindowsFormsApp1.Forms.Usuario
 {
@@ -9,6 +10,17 @@ namespace WindowsFormsApp1.Forms.Usuario
         public UsuarioCrud()
         {
             InitializeComponent();
+            cmbPersona.DataSource = new[]
+            {
+                TipoPersona.Fisica,
+                TipoPersona.Juridica
+            };
+            cmbUsuario.DataSource = new[]
+            {
+                TipoUsuario.Empleado,
+                TipoUsuario.Estudiante,
+                TipoUsuario.Profesor
+            };
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -24,46 +36,49 @@ namespace WindowsFormsApp1.Forms.Usuario
                 IsActive = chxActivo.Checked,
                 IsAdmin = chxAdministrador.Checked,
                 Password = txtContraseña.Text,
-                Username = txtNombre.Text
+                Username = txtNombre.Text,
+                TipoUsuario = (TipoUsuario) cmbUsuario.SelectedValue,
+                TipoPersona = (TipoPersona) cmbPersona.SelectedValue
             };
 
-            if (Form1.usuario.IsAdmin != true)
-            {
-                string asd = "Usted no tiene permisos para crear usuarios";
-                string zxc = "Error";
-                MessageBox.Show(asd, zxc);
-                return;
-            }
-
-            if (txtContraseña.Text != txtConfirmarContraseña.Text)
-            {
-                string body = "Las contraseñas no coinciden";
-                string header = "Error";
-                MessageBox.Show(body, header);
-                return;
-            }
-
             if (ValidacionCedula(usuario.Cedula))
+            {
+                if (Form1.usuario.IsAdmin != true)
+                {
+                    string asd = "Usted no tiene permisos para crear usuarios";
+                    string zxc = "Error";
+                    MessageBox.Show(asd, zxc);
+                    return;
+                }
+
+                if (txtContraseña.Text != txtConfirmarContraseña.Text)
+                {
+                    string body = "Las contraseñas no coinciden";
+                    string header = "Error";
+                    MessageBox.Show(body, header);
+                    return;
+                }
+
+                using (var context = new DianaContext())
+                {
+                    context.Usuarios.Add(usuario);
+                    context.SaveChanges();
+                }
+
+                var usuarioLista = new UsuarioLista();
+                usuarioLista.Show();
+                Hide();
+
+                string message = "Usuario creado";
+                string title = "Exito";
+                MessageBox.Show(message, title);
+            }
+            else
             {
                 string body = "La cedula esta incorrecta";
                 string header = "Error";
                 MessageBox.Show(body, header);
-                return;
             }
-
-            using (var context = new DianaContext())
-            {
-                context.Usuarios.Add(usuario);
-                context.SaveChanges();
-            }
-
-            var usuarioLista = new UsuarioLista();
-            usuarioLista.Show();
-            Hide();
-
-            string message = "Usuario creado";
-            string title = "Exito";
-            MessageBox.Show(message, title);
         }
 
         private void button4_Click(object sender, EventArgs e)

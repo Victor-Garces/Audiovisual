@@ -45,6 +45,10 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.cmbPersona = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button3
@@ -58,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(259, 347);
+            this.button2.Location = new System.Drawing.Point(259, 396);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 30);
             this.button2.TabIndex = 31;
@@ -67,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 347);
+            this.button1.Location = new System.Drawing.Point(135, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 30);
             this.button1.TabIndex = 30;
@@ -78,7 +82,7 @@
             // chxActivo
             // 
             this.chxActivo.AutoSize = true;
-            this.chxActivo.Location = new System.Drawing.Point(207, 277);
+            this.chxActivo.Location = new System.Drawing.Point(207, 326);
             this.chxActivo.Name = "chxActivo";
             this.chxActivo.Size = new System.Drawing.Size(18, 17);
             this.chxActivo.TabIndex = 29;
@@ -86,14 +90,14 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(207, 247);
+            this.txtCedula.Location = new System.Drawing.Point(207, 296);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(168, 22);
             this.txtCedula.TabIndex = 27;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(207, 158);
+            this.txtNombre.Location = new System.Drawing.Point(207, 149);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 22);
             this.txtNombre.TabIndex = 26;
@@ -101,16 +105,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(151, 277);
+            this.label7.Location = new System.Drawing.Point(151, 326);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.Size = new System.Drawing.Size(52, 17);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Activo";
+            this.label7.Text = "Estado";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(139, 161);
+            this.label5.Location = new System.Drawing.Point(139, 152);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 23;
@@ -119,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(145, 250);
+            this.label4.Location = new System.Drawing.Point(145, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 22;
@@ -128,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 116);
+            this.label1.Location = new System.Drawing.Point(204, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 20;
@@ -137,7 +141,7 @@
             // chxAdministrador
             // 
             this.chxAdministrador.AutoSize = true;
-            this.chxAdministrador.Location = new System.Drawing.Point(207, 308);
+            this.chxAdministrador.Location = new System.Drawing.Point(207, 357);
             this.chxAdministrador.Name = "chxAdministrador";
             this.chxAdministrador.Size = new System.Drawing.Size(18, 17);
             this.chxAdministrador.TabIndex = 35;
@@ -146,7 +150,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 307);
+            this.label3.Location = new System.Drawing.Point(102, 356);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 34;
@@ -154,7 +158,7 @@
             // 
             // txtConfirmarContraseña
             // 
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(207, 217);
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(207, 208);
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.PasswordChar = '*';
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(168, 22);
@@ -163,7 +167,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 219);
+            this.label2.Location = new System.Drawing.Point(53, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 17);
             this.label2.TabIndex = 36;
@@ -172,7 +176,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(207, 186);
+            this.txtContraseña.Location = new System.Drawing.Point(207, 177);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(168, 22);
@@ -181,7 +185,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(116, 189);
+            this.label6.Location = new System.Drawing.Point(116, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 17);
             this.label6.TabIndex = 38;
@@ -197,11 +201,49 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(90, 239);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 17);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Tipo de usuario";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(90, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 17);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Tipo de persona";
+            // 
+            // cmbUsuario
+            // 
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(207, 236);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(168, 24);
+            this.cmbUsuario.TabIndex = 44;
+            // 
+            // cmbPersona
+            // 
+            this.cmbPersona.FormattingEnabled = true;
+            this.cmbPersona.Location = new System.Drawing.Point(207, 266);
+            this.cmbPersona.Name = "cmbPersona";
+            this.cmbPersona.Size = new System.Drawing.Size(168, 24);
+            this.cmbPersona.TabIndex = 45;
+            // 
             // UsuarioCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbPersona);
+            this.Controls.Add(this.cmbUsuario);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.label6);
@@ -245,5 +287,9 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.ComboBox cmbPersona;
     }
 }

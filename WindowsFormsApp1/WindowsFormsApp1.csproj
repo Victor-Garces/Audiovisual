@@ -67,6 +67,8 @@
     </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
+    <Compile Include="DataLayer\Enums\TipoPersona.cs" />
+    <Compile Include="DataLayer\Enums\TipoUsuario.cs" />
     <Compile Include="DataLayer\Models\Empleado.cs" />
     <Compile Include="DataLayer\Models\Usuario.cs" />
     <Compile Include="Form1.cs">
@@ -109,6 +111,10 @@
     <Compile Include="Migrations\201903140316478_FirstMigration.Designer.cs">
       <DependentUpon>201903140316478_FirstMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs" />
+    <Compile Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.Designer.cs">
+      <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903140316478_FirstMigration.resx">
       <DependentUpon>201903140316478_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.resx">
+      <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

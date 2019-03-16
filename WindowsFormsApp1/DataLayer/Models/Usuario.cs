@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1.DataLayer.Models
+﻿using WindowsFormsApp1.DataLayer.Enums;
+
+namespace WindowsFormsApp1.DataLayer.Models
 {
     public sealed class Usuario
     {
@@ -8,5 +10,7 @@
         public string Cedula { get; set; }
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
+        public TipoPersona TipoPersona { get; set; }
+        public TipoUsuario TipoUsuario { get; set; }
     }
 }
