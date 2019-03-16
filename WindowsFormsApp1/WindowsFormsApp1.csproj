@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AUDIOVISUALDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AUDIOVISUALDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
     <Compile Include="DataLayer\Models\Empleado.cs" />
@@ -70,17 +75,35 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EmpleadoCrud.cs">
+    <Compile Include="Forms\Empleado\EmpleadoCrud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EmpleadoCrud.Designer.cs">
+    <Compile Include="Forms\Empleado\EmpleadoCrud.Designer.cs">
       <DependentUpon>EmpleadoCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EmpleadoLista.cs">
+    <Compile Include="Forms\Empleado\EmpleadoLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EmpleadoLista.Designer.cs">
+    <Compile Include="Forms\Empleado\EmpleadoLista.Designer.cs">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usuario\UsuarioCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Usuario\UsuarioCrud.Designer.cs">
+      <DependentUpon>UsuarioCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Usuario\UsuarioLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Usuario\UsuarioLista.Designer.cs">
+      <DependentUpon>UsuarioLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201903140316478_FirstMigration.cs" />
     <Compile Include="Migrations\201903140316478_FirstMigration.Designer.cs">
@@ -92,12 +115,21 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EmpleadoCrud.resx">
+    <EmbeddedResource Include="Forms\Empleado\EmpleadoCrud.resx">
       <DependentUpon>EmpleadoCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EmpleadoLista.resx">
+    <EmbeddedResource Include="Forms\Empleado\EmpleadoLista.resx">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usuario\UsuarioCrud.resx">
+      <DependentUpon>UsuarioCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Usuario\UsuarioLista.resx">
+      <DependentUpon>UsuarioLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903140316478_FirstMigration.resx">
       <DependentUpon>201903140316478_FirstMigration.cs</DependentUpon>
@@ -121,6 +153,17 @@
     </None>
     <None Include="AUDIOVISUALDataSet.xss">
       <DependentUpon>AUDIOVISUALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet1.xsc">
+      <DependentUpon>AUDIOVISUALDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet1.xss">
+      <DependentUpon>AUDIOVISUALDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

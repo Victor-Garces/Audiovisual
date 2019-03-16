@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
                     }
 
                     usuario = user;
-                    var empleadoCrud = new EmpleadoCrud();
-                    empleadoCrud.Show();
+                    var main = new Main();
+                    main.Show();
                     Hide();
                 }
                 else

@@ -35,5 +35,12 @@ namespace WindowsFormsApp1.Forms
             empleadoCrud.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var main = new Main();
+            main.Show();
+            Hide();
+        }
     }
 }

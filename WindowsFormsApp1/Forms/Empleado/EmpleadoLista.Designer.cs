@@ -30,20 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet = new WindowsFormsApp1.AUDIOVISUALDataSet();
-            this.EmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.EmpleadosTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters.EmpleadosTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tandaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.EmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet = new WindowsFormsApp1.AUDIOVISUALDataSet();
+            this.EmpleadosTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters.EmpleadosTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,20 +64,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(643, 342);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // aUDIOVISUALDataSet
-            // 
-            this.aUDIOVISUALDataSet.DataSetName = "AUDIOVISUALDataSet";
-            this.aUDIOVISUALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // EmpleadosBindingSource
-            // 
-            this.EmpleadosBindingSource.DataMember = "Empleados";
-            this.EmpleadosBindingSource.DataSource = this.aUDIOVISUALDataSet;
-            // 
-            // EmpleadosTableAdapter
-            // 
-            this.EmpleadosTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -115,6 +102,20 @@
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
             // 
+            // EmpleadosBindingSource
+            // 
+            this.EmpleadosBindingSource.DataMember = "Empleados";
+            this.EmpleadosBindingSource.DataSource = this.aUDIOVISUALDataSet;
+            // 
+            // aUDIOVISUALDataSet
+            // 
+            this.aUDIOVISUALDataSet.DataSetName = "AUDIOVISUALDataSet";
+            this.aUDIOVISUALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // EmpleadosTableAdapter
+            // 
+            this.EmpleadosTableAdapter.ClearBeforeFill = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -135,20 +136,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(94, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 23);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Volver a inicio";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // EmpleadoLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "EmpleadoLista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpleadoLista";
             this.Load += new System.EventHandler(this.EmpleadoLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmpleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +181,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
     }
 }
