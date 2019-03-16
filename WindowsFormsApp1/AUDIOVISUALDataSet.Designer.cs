@@ -409,7 +409,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadosRow AddEmpleadosRow(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado) {
+            public EmpleadosRow AddEmpleadosRow(string Nombre, string Cedula, int Tanda, System.DateTime FechaIngreso, bool Estado) {
                 EmpleadosRow rowEmpleadosRow = ((EmpleadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -464,7 +464,7 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnNombre);
                 this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCedula);
-                this.columnTanda = new global::System.Data.DataColumn("Tanda", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTanda = new global::System.Data.DataColumn("Tanda", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTanda);
                 this.columnFechaIngreso = new global::System.Data.DataColumn("FechaIngreso", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaIngreso);
@@ -480,7 +480,7 @@ namespace WindowsFormsApp1 {
                 this.columnId.Unique = true;
                 this.columnNombre.MaxLength = 2147483647;
                 this.columnCedula.MaxLength = 2147483647;
-                this.columnTanda.MaxLength = 2147483647;
+                this.columnTanda.AllowDBNull = false;
                 this.columnFechaIngreso.AllowDBNull = false;
                 this.columnEstado.AllowDBNull = false;
             }
@@ -668,14 +668,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Tanda {
+            public int Tanda {
                 get {
-                    try {
-                        return ((string)(this[this.tableEmpleados.TandaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tanda\' in table \'Empleados\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableEmpleados.TandaColumn]));
                 }
                 set {
                     this[this.tableEmpleados.TandaColumn] = value;
@@ -726,18 +721,6 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCedulaNull() {
                 this[this.tableEmpleados.CedulaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTandaNull() {
-                return this.IsNull(this.tableEmpleados.TandaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTandaNull() {
-                this[this.tableEmpleados.TandaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -909,10 +892,12 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleados] WHERE (([Id] = @Original_Id) AND ([FechaIngreso] = " +
-                "@Original_FechaIngreso) AND ([Estado] = @Original_Estado))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleados] WHERE (([Id] = @Original_Id) AND ([Tanda] = @Origin" +
+                "al_Tanda) AND ([FechaIngreso] = @Original_FechaIngreso) AND ([Estado] = @Origina" +
+                "l_Estado))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -924,20 +909,21 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSetTableAdapters {
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tanda", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Empleados] SET [Nombre] = @Nombre, [Cedula] = @Cedula, [Tanda] = @Tanda, [FechaIngreso] = @FechaIngreso, [Estado] = @Estado WHERE (([Id] = @Original_Id) AND ([FechaIngreso] = @Original_FechaIngreso) AND ([Estado] = @Original_Estado));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Empleados] SET [Nombre] = @Nombre, [Cedula] = @Cedula, [Tanda] = @Tanda, [FechaIngreso] = @FechaIngreso, [Estado] = @Estado WHERE (([Id] = @Original_Id) AND ([Tanda] = @Original_Tanda) AND ([FechaIngreso] = @Original_FechaIngreso) AND ([Estado] = @Original_Estado));
 SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tanda", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tanda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tanda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaIngreso", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaIngreso", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1017,10 +1003,11 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_FechaIngreso, bool Original_Estado) {
+        public virtual int Delete(int Original_Id, int Original_Tanda, System.DateTime Original_FechaIngreso, bool Original_Estado) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_FechaIngreso));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_Estado));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Tanda));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_FechaIngreso));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_Estado));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1041,7 +1028,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado) {
+        public virtual int Insert(string Nombre, string Cedula, int Tanda, System.DateTime FechaIngreso, bool Estado) {
             if ((Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1054,12 +1041,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Cedula));
             }
-            if ((Tanda == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Tanda));
-            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Tanda));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(FechaIngreso));
             this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(Estado));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -1082,7 +1064,7 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado, int Original_Id, System.DateTime Original_FechaIngreso, bool Original_Estado, int Id) {
+        public virtual int Update(string Nombre, string Cedula, int Tanda, System.DateTime FechaIngreso, bool Estado, int Original_Id, int Original_Tanda, System.DateTime Original_FechaIngreso, bool Original_Estado, int Id) {
             if ((Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1095,18 +1077,14 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Cedula));
             }
-            if ((Tanda == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Tanda));
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Tanda));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(FechaIngreso));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(Estado));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_FechaIngreso));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Original_Estado));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Tanda));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_FechaIngreso));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Original_Estado));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1127,8 +1105,8 @@ SELECT Id, Nombre, Cedula, Tanda, FechaIngreso, Estado FROM Empleados WHERE (Id 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, string Cedula, string Tanda, System.DateTime FechaIngreso, bool Estado, int Original_Id, System.DateTime Original_FechaIngreso, bool Original_Estado) {
-            return this.Update(Nombre, Cedula, Tanda, FechaIngreso, Estado, Original_Id, Original_FechaIngreso, Original_Estado, Original_Id);
+        public virtual int Update(string Nombre, string Cedula, int Tanda, System.DateTime FechaIngreso, bool Estado, int Original_Id, int Original_Tanda, System.DateTime Original_FechaIngreso, bool Original_Estado) {
+            return this.Update(Nombre, Cedula, Tanda, FechaIngreso, Estado, Original_Id, Original_Tanda, Original_FechaIngreso, Original_Estado, Original_Id);
         }
     }
     

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp1.Forms.Empleado;
 using WindowsFormsApp1.Forms.Usuario;
 
 namespace WindowsFormsApp1.Forms

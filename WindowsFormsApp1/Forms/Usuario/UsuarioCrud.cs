@@ -43,6 +43,14 @@ namespace WindowsFormsApp1.Forms.Usuario
                 return;
             }
 
+            if (ValidacionCedula(usuario.Cedula))
+            {
+                string body = "La cedula esta incorrecta";
+                string header = "Error";
+                MessageBox.Show(body, header);
+                return;
+            }
+
             using (var context = new DianaContext())
             {
                 context.Usuarios.Add(usuario);
@@ -63,6 +71,38 @@ namespace WindowsFormsApp1.Forms.Usuario
             var main = new Main();
             main.Show();
             Hide();
+        }
+
+        private bool ValidacionCedula(string pCedula)
+        {
+            if (pCedula == "00000000000")
+            {
+                return false;
+            }
+
+            int vnTotal = 0;
+
+            string vcCedula = pCedula.Replace("-", "");
+
+            int pLongCed = vcCedula.Trim().Length;
+
+            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
+
+            if (pLongCed < 11 || pLongCed > 11)
+                return false;
+
+            for (int vDig = 1; vDig <= pLongCed; vDig++)
+            {
+                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
+                if (vCalculo < 10)
+                    vnTotal += vCalculo;
+                else
+                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
+            }
+            if (vnTotal % 10 == 0)
+                return true;
+            else
+                return false;
         }
     }
 }

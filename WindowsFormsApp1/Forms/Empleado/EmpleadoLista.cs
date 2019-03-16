@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Forms
+namespace WindowsFormsApp1.Forms.Empleado
 {
     public partial class EmpleadoLista : Form
     {
@@ -20,12 +20,7 @@ namespace WindowsFormsApp1.Forms
         private void EmpleadoLista_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aUDIOVISUALDataSet.Empleados' table. You can move, or remove it, as needed.
-            this.EmpleadosTableAdapter.Fill(this.aUDIOVISUALDataSet.Empleados);
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            this.empleadosTableAdapter.Fill(this.aUDIOVISUALDataSet.Empleados);
 
         }
 

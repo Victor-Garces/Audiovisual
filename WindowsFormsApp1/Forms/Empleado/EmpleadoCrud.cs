@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using WindowsFormsApp1.DataLayer;
 using WindowsFormsApp1.DataLayer.Enums;
-using WindowsFormsApp1.DataLayer.Models;
+using WindowsFormsApp1.Forms.Empleado;
 
 namespace WindowsFormsApp1.Forms
 {
@@ -31,7 +34,7 @@ namespace WindowsFormsApp1.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var empleado = new Empleado
+            var empleado = new DataLayer.Models.Empleado
             {
                 Cedula = textBox6.Text,
                 Estado = checkBox1.Checked,
@@ -44,17 +47,14 @@ namespace WindowsFormsApp1.Forms
             {
                 if (Form1.usuario.IsAdmin != true)
                 {
-                    string asd = "Usted no tiene permisos para crear empleados";
-                    string zxc = "Exito";
-                    MessageBox.Show(asd, zxc);
+                    string body = "Usted no tiene permisos para crear empleados";
+                    string header = "Exito";
+                    MessageBox.Show(body, header);
                     return;
                 }
 
-                using (var context = new DianaContext())
-                {
-                    context.Empleados.Add(empleado);
-                    context.SaveChanges();
-                }
+                CrearNuevoEmpleado("Password=sa1234;Persist Security Info=True;User ID=sa;Initial Catalog=AUDIOVISUAL;Data Source=.", 
+                    empleado.Nombre, empleado.Cedula, Convert.ToInt32(empleado.Tanda), empleado.FechaIngreso, empleado.Estado);
 
                 var empleadoLista = new EmpleadoLista();
                 empleadoLista.Show();
@@ -71,8 +71,6 @@ namespace WindowsFormsApp1.Forms
                 MessageBox.Show(message, title);
             }
         }
-
-
 
         private bool ValidacionCedula(string pCedula)
         {
@@ -130,6 +128,26 @@ namespace WindowsFormsApp1.Forms
             var main = new Main();
             main.Show();
             Hide();
+        }
+
+        private void CrearNuevoEmpleado(string connectionString, string nombre, string cedula, int tanda, DateTime fechaIngreso, bool estado)
+        {
+            string query = "INSERT INTO dbo.Empleados (Nombre, Cedula, Tanda, FechaIngreso, Estado) " +
+                           "VALUES (@Nombre, @Cedula, @Tanda, @FechaIngreso, @Estado) ";
+
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, cn))
+            {
+                cmd.Parameters.Add("@Nombre", SqlDbType.VarChar, 50).Value = nombre;
+                cmd.Parameters.Add("@Cedula", SqlDbType.VarChar, 50).Value = cedula;
+                cmd.Parameters.Add("@Tanda", SqlDbType.Int).Value = tanda;
+                cmd.Parameters.Add("@FechaIngreso", SqlDbType.DateTime).Value = fechaIngreso;
+                cmd.Parameters.Add("@Estado", SqlDbType.Bit).Value = estado;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
         }
     }
 }
