@@ -113,6 +113,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(168, 22);
             this.textBox6.TabIndex = 12;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // dateTimePicker1
             // 

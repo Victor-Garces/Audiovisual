@@ -49,6 +49,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.cmbPersona = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -94,10 +96,11 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(168, 22);
             this.txtCedula.TabIndex = 27;
+            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(207, 149);
+            this.txtNombre.Location = new System.Drawing.Point(207, 121);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 22);
             this.txtNombre.TabIndex = 26;
@@ -114,7 +117,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(139, 152);
+            this.label5.Location = new System.Drawing.Point(139, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 23;
@@ -132,7 +135,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 107);
+            this.label1.Location = new System.Drawing.Point(204, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 20;
@@ -158,7 +161,7 @@
             // 
             // txtConfirmarContraseña
             // 
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(207, 208);
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(207, 180);
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.PasswordChar = '*';
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(168, 22);
@@ -167,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 210);
+            this.label2.Location = new System.Drawing.Point(53, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 17);
             this.label2.TabIndex = 36;
@@ -176,7 +179,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(207, 177);
+            this.txtContraseña.Location = new System.Drawing.Point(207, 149);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(168, 22);
@@ -185,7 +188,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(116, 180);
+            this.label6.Location = new System.Drawing.Point(116, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 17);
             this.label6.TabIndex = 38;
@@ -235,11 +238,30 @@
             this.cmbPersona.Size = new System.Drawing.Size(168, 24);
             this.cmbPersona.TabIndex = 45;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(207, 208);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 22);
+            this.textBox1.TabIndex = 47;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(121, 211);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 17);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "No. Carnet";
+            // 
             // UsuarioCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.cmbPersona);
             this.Controls.Add(this.cmbUsuario);
             this.Controls.Add(this.label9);
@@ -291,5 +313,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbUsuario;
         private System.Windows.Forms.ComboBox cmbPersona;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

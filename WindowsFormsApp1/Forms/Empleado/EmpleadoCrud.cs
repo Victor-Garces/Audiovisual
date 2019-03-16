@@ -149,5 +149,14 @@ namespace WindowsFormsApp1.Forms
                 cn.Close();
             }
         }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor solo introduzca números.");
+                textBox6.Text = textBox6.Text.Remove(textBox6.Text.Length - 1);
+            }
+        }
     }
 }
