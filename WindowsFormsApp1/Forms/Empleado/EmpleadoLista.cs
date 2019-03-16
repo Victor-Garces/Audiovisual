@@ -37,5 +37,15 @@ namespace WindowsFormsApp1.Forms.Empleado
             main.Show();
             Hide();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var bindingSource = new BindingSource
+            {
+                DataSource = dataGridView1.DataSource,
+                Filter = "Nombre" + " like '%" + textBox1.Text + "%'"
+            };
+            dataGridView1.DataSource = bindingSource;
+        }
     }
 }

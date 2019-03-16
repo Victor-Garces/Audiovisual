@@ -30,5 +30,14 @@ namespace WindowsFormsApp1.Forms.Usuario
             main.Show();
             Hide();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var bindingSource = new BindingSource
+            {
+                DataSource = dataGridView1.DataSource, Filter = "Username" + " like '%" + textBox1.Text + "%'"
+            };
+            dataGridView1.DataSource = bindingSource;
+        }
     }
 }
