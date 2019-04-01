@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AUDIOVISUALDataSet.cs">
+      <DependentUpon>AUDIOVISUALDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AUDIOVISUALDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
