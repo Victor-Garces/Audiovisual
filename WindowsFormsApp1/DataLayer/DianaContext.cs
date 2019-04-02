@@ -9,6 +9,7 @@ namespace WindowsFormsApp1.DataLayer
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
+        public DbSet<Equipo> Equipos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

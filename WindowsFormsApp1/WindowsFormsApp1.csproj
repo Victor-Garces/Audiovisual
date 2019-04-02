@@ -70,9 +70,12 @@
     </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
+    <Compile Include="DataLayer\Enums\TipoEquipo.cs" />
     <Compile Include="DataLayer\Enums\TipoPersona.cs" />
+    <Compile Include="DataLayer\Enums\TipoTecnologiaConexion.cs" />
     <Compile Include="DataLayer\Enums\TipoUsuario.cs" />
     <Compile Include="DataLayer\Models\Empleado.cs" />
+    <Compile Include="DataLayer\Models\Equipo.cs" />
     <Compile Include="DataLayer\Models\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -91,6 +94,12 @@
     </Compile>
     <Compile Include="Forms\Empleado\EmpleadoLista.Designer.cs">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Equipos\EquiposLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipos\EquiposLista.Designer.cs">
+      <DependentUpon>EquiposLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
@@ -122,6 +131,10 @@
     <Compile Include="Migrations\201903161531313_AddedNoCarnetToUserTable.Designer.cs">
       <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904020051491_AddEquiposTable.cs" />
+    <Compile Include="Migrations\201904020051491_AddEquiposTable.Designer.cs">
+      <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903161531313_AddedNoCarnetToUserTable.resx">
       <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904020051491_AddEquiposTable.resx">
+      <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
