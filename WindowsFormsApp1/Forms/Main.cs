@@ -40,5 +40,12 @@ namespace WindowsFormsApp1.Forms
             equiposLista.Show();
             Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var marcas = new Marcas.Marcas();
+            marcas.Show();
+            Hide();
+        }
     }
 }

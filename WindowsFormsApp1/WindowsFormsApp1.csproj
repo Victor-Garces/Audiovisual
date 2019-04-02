@@ -73,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AUDIOVISUALDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AUDIOVISUALDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
     <Compile Include="DataLayer\Enums\TipoEquipo.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="DataLayer\Enums\TipoUsuario.cs" />
     <Compile Include="DataLayer\Models\Empleado.cs" />
     <Compile Include="DataLayer\Models\Equipo.cs" />
+    <Compile Include="DataLayer\Models\Marca.cs" />
     <Compile Include="DataLayer\Models\Usuario.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -112,6 +118,12 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Marcas\Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Marcas\Marcas.Designer.cs">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Usuario\UsuarioCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,10 @@
     <Compile Include="Migrations\201904020051491_AddEquiposTable.Designer.cs">
       <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904020105466_AddMarcasTable.cs" />
+    <Compile Include="Migrations\201904020105466_AddMarcasTable.Designer.cs">
+      <DependentUpon>201904020105466_AddMarcasTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,6 +174,9 @@
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Marcas\Marcas.resx">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usuario\UsuarioCrud.resx">
       <DependentUpon>UsuarioCrud.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904020051491_AddEquiposTable.resx">
       <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904020105466_AddMarcasTable.resx">
+      <DependentUpon>201904020105466_AddMarcasTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -217,6 +239,17 @@
     </None>
     <None Include="AUDIOVISUALDataSet2.xss">
       <DependentUpon>AUDIOVISUALDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet3.xsc">
+      <DependentUpon>AUDIOVISUALDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet3.xss">
+      <DependentUpon>AUDIOVISUALDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
