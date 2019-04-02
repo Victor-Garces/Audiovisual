@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp1.Forms.Empleado;
+using WindowsFormsApp1.Forms.Equipos;
 using WindowsFormsApp1.Forms.Usuario;
 
 namespace WindowsFormsApp1.Forms
@@ -35,7 +36,9 @@ namespace WindowsFormsApp1.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            var equiposLista = new EquiposLista();
+            equiposLista.Show();
+            Hide();
         }
     }
 }

@@ -16,5 +16,12 @@ namespace WindowsFormsApp1.Forms.Equipos
         {
             InitializeComponent();
         }
+
+        private void EquiposLista_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'aUDIOVISUALDataSet2.Equipos' table. You can move, or remove it, as needed.
+            this.equiposTableAdapter.Fill(this.aUDIOVISUALDataSet2.Equipos);
+
+        }
     }
 }

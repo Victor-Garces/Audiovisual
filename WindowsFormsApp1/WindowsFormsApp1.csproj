@@ -68,6 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AUDIOVISUALDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AUDIOVISUALDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
     <Compile Include="DataLayer\Enums\TipoEquipo.cs" />
@@ -147,6 +152,9 @@
     <EmbeddedResource Include="Forms\Empleado\EmpleadoLista.resx">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipos\EquiposLista.resx">
+      <DependentUpon>EquiposLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +206,17 @@
     </None>
     <None Include="AUDIOVISUALDataSet1.xss">
       <DependentUpon>AUDIOVISUALDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet2.xsc">
+      <DependentUpon>AUDIOVISUALDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet2.xss">
+      <DependentUpon>AUDIOVISUALDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
