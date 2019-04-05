@@ -62,7 +62,7 @@
             this.estadoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.empleadosBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(63, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(492, 258);
@@ -122,7 +122,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(64, 22);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 19);
             this.button4.TabIndex = 44;
@@ -133,9 +133,9 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(443, 316);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 19);
+            this.button1.Size = new System.Drawing.Size(112, 26);
             this.button1.TabIndex = 43;
             this.button1.Text = "Crear empleado";
             this.button1.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(449, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(106, 20);
             this.textBox1.TabIndex = 45;
@@ -180,7 +180,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EmpleadoLista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpleadoLista";

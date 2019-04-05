@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using WindowsFormsApp1.Forms.Empleado;
 using WindowsFormsApp1.Forms.Equipos;
+using WindowsFormsApp1.Forms.Tipo_Equipo;
 using WindowsFormsApp1.Forms.Usuario;
 
 namespace WindowsFormsApp1.Forms
@@ -45,6 +46,13 @@ namespace WindowsFormsApp1.Forms
         {
             var marcas = new Marcas.Marcas();
             marcas.Show();
+            Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var tipoequipolista = new Tipoequipolista();
+            tipoequipolista.Show();
             Hide();
         }
     }
