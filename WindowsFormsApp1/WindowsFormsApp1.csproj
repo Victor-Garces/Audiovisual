@@ -83,6 +83,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AUDIOVISUALDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AUDIOVISUALDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AUDIOVISUALDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
     <Compile Include="DataLayer\Enums\TipoEquipo.cs" />
@@ -92,6 +102,9 @@
     <Compile Include="DataLayer\Models\Empleado.cs" />
     <Compile Include="DataLayer\Models\Equipo.cs" />
     <Compile Include="DataLayer\Models\Marca.cs" />
+    <Compile Include="DataLayer\Models\Modelo.cs" />
+    <Compile Include="DataLayer\Models\RentaDevolucion.cs" />
+    <Compile Include="DataLayer\Models\TipoConexion.cs" />
     <Compile Include="DataLayer\Models\TipoEquipo.cs" />
     <Compile Include="DataLayer\Models\Usuario.cs" />
     <Compile Include="Form1.cs">
@@ -129,6 +142,18 @@
     </Compile>
     <Compile Include="Forms\Marcas\Marcas.Designer.cs">
       <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modelos\ModeloLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modelos\ModeloLista.Designer.cs">
+      <DependentUpon>ModeloLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tipo Conexiones\TipoConexionLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tipo Conexiones\TipoConexionLista.Designer.cs">
+      <DependentUpon>TipoConexionLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tipo Equipo\Tipoequipolista.cs">
       <SubType>Form</SubType>
@@ -172,6 +197,22 @@
     <Compile Include="Migrations\201904050005472_CreateEquipoLista.Designer.cs">
       <DependentUpon>201904050005472_CreateEquipoLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904050031159_CreateModelo.cs" />
+    <Compile Include="Migrations\201904050031159_CreateModelo.Designer.cs">
+      <DependentUpon>201904050031159_CreateModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050034173_AddedModelsTable.cs" />
+    <Compile Include="Migrations\201904050034173_AddedModelsTable.Designer.cs">
+      <DependentUpon>201904050034173_AddedModelsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050045596_CreateTipoConexion.cs" />
+    <Compile Include="Migrations\201904050045596_CreateTipoConexion.Designer.cs">
+      <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050105292_CreateRentaDevolucion.cs" />
+    <Compile Include="Migrations\201904050105292_CreateRentaDevolucion.Designer.cs">
+      <DependentUpon>201904050105292_CreateRentaDevolucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,6 +233,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Marcas\Marcas.resx">
       <DependentUpon>Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modelos\ModeloLista.resx">
+      <DependentUpon>ModeloLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tipo Conexiones\TipoConexionLista.resx">
+      <DependentUpon>TipoConexionLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tipo Equipo\Tipoequipolista.resx">
       <DependentUpon>Tipoequipolista.cs</DependentUpon>
@@ -219,6 +266,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904050005472_CreateEquipoLista.resx">
       <DependentUpon>201904050005472_CreateEquipoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050031159_CreateModelo.resx">
+      <DependentUpon>201904050031159_CreateModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050034173_AddedModelsTable.resx">
+      <DependentUpon>201904050034173_AddedModelsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050045596_CreateTipoConexion.resx">
+      <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050105292_CreateRentaDevolucion.resx">
+      <DependentUpon>201904050105292_CreateRentaDevolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -283,6 +342,28 @@
     </None>
     <None Include="AUDIOVISUALDataSet4.xss">
       <DependentUpon>AUDIOVISUALDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet5.xsc">
+      <DependentUpon>AUDIOVISUALDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet5.xss">
+      <DependentUpon>AUDIOVISUALDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet6.xsc">
+      <DependentUpon>AUDIOVISUALDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet6.xss">
+      <DependentUpon>AUDIOVISUALDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

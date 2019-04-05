@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using WindowsFormsApp1.Forms.Empleado;
 using WindowsFormsApp1.Forms.Equipos;
+using WindowsFormsApp1.Forms.Modelos;
+using WindowsFormsApp1.Forms.Tipo_Conexiones;
 using WindowsFormsApp1.Forms.Tipo_Equipo;
 using WindowsFormsApp1.Forms.Usuario;
 
@@ -54,6 +56,22 @@ namespace WindowsFormsApp1.Forms
             var tipoequipolista = new Tipoequipolista();
             tipoequipolista.Show();
             Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var modeloLista = new ModeloLista();
+            modeloLista.Show();
+            Hide();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var TipoConexionLista = new TipoConexionLista();
+            TipoConexionLista.Show();
+            Hide();
+
         }
     }
 }
