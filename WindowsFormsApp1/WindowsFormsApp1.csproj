@@ -209,10 +209,6 @@
     <Compile Include="Migrations\201904050045596_CreateTipoConexion.Designer.cs">
       <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904050105292_CreateRentaDevolucion.cs" />
-    <Compile Include="Migrations\201904050105292_CreateRentaDevolucion.Designer.cs">
-      <DependentUpon>201904050105292_CreateRentaDevolucion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -275,9 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904050045596_CreateTipoConexion.resx">
       <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904050105292_CreateRentaDevolucion.resx">
-      <DependentUpon>201904050105292_CreateRentaDevolucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

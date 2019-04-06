@@ -14,7 +14,8 @@ namespace WindowsFormsApp1.DataLayer
         public DbSet<TipoEquipo> TipoEquipos { get; set; }
         public DbSet<Modelo> Modelos { get; set; }
         public DbSet<TipoConexion> TipoConexiones { get; set; }
-        public DbSet<RentaDevolucion> RentaDevolucion { get; set; }
+        //public DbSet<RentaDevolucion> RentaDevoluciones { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
