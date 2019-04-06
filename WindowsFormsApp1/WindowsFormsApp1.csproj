@@ -125,6 +125,12 @@
     <Compile Include="Forms\Empleado\EmpleadoLista.Designer.cs">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Equipos\EquipoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipos\EquipoCrud.Designer.cs">
+      <DependentUpon>EquipoCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Equipos\EquiposLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,11 +143,23 @@
     <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Marcas\MarcaCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Marcas\MarcaCrud.Designer.cs">
+      <DependentUpon>MarcaCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Marcas\Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Marcas\Marcas.Designer.cs">
       <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Modelos\ModeloCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modelos\ModeloCrud.Designer.cs">
+      <DependentUpon>ModeloCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Modelos\ModeloLista.cs">
       <SubType>Form</SubType>
@@ -149,11 +167,29 @@
     <Compile Include="Forms\Modelos\ModeloLista.Designer.cs">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Rentas y Devoluciones\RentayDevolucionCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rentas y Devoluciones\RentayDevolucionCrud.Designer.cs">
+      <DependentUpon>RentayDevolucionCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tipo Conexiones\TipoConexionCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tipo Conexiones\TipoConexionCrud.Designer.cs">
+      <DependentUpon>TipoConexionCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tipo Conexiones\TipoConexionLista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tipo Conexiones\TipoConexionLista.Designer.cs">
       <DependentUpon>TipoConexionLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tipo Equipo\TipoEquipoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tipo Equipo\TipoEquipoCrud.Designer.cs">
+      <DependentUpon>TipoEquipoCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tipo Equipo\Tipoequipolista.cs">
       <SubType>Form</SubType>
@@ -221,20 +257,38 @@
     <EmbeddedResource Include="Forms\Empleado\EmpleadoLista.resx">
       <DependentUpon>EmpleadoLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipos\EquipoCrud.resx">
+      <DependentUpon>EquipoCrud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Equipos\EquiposLista.resx">
       <DependentUpon>EquiposLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Marcas\MarcaCrud.resx">
+      <DependentUpon>MarcaCrud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Marcas\Marcas.resx">
       <DependentUpon>Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modelos\ModeloCrud.resx">
+      <DependentUpon>ModeloCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Modelos\ModeloLista.resx">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rentas y Devoluciones\RentayDevolucionCrud.resx">
+      <DependentUpon>RentayDevolucionCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tipo Conexiones\TipoConexionCrud.resx">
+      <DependentUpon>TipoConexionCrud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tipo Conexiones\TipoConexionLista.resx">
       <DependentUpon>TipoConexionLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tipo Equipo\TipoEquipoCrud.resx">
+      <DependentUpon>TipoEquipoCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tipo Equipo\Tipoequipolista.resx">
       <DependentUpon>Tipoequipolista.cs</DependentUpon>

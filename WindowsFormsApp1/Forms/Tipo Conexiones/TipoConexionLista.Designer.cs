@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet6 = new WindowsFormsApp1.AUDIOVISUALDataSet6();
-            this.tipoConexionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoConexionesTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet6TableAdapters.TipoConexionesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoConexionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet6 = new WindowsFormsApp1.AUDIOVISUALDataSet6();
+            this.tipoConexionesTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet6TableAdapters.TipoConexionesTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoConexionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,20 +59,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 235);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // aUDIOVISUALDataSet6
-            // 
-            this.aUDIOVISUALDataSet6.DataSetName = "AUDIOVISUALDataSet6";
-            this.aUDIOVISUALDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoConexionesBindingSource
-            // 
-            this.tipoConexionesBindingSource.DataMember = "TipoConexiones";
-            this.tipoConexionesBindingSource.DataSource = this.aUDIOVISUALDataSet6;
-            // 
-            // tipoConexionesTableAdapter
-            // 
-            this.tipoConexionesTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -92,6 +78,20 @@
             this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "Estado";
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
+            // 
+            // tipoConexionesBindingSource
+            // 
+            this.tipoConexionesBindingSource.DataMember = "TipoConexiones";
+            this.tipoConexionesBindingSource.DataSource = this.aUDIOVISUALDataSet6;
+            // 
+            // aUDIOVISUALDataSet6
+            // 
+            this.aUDIOVISUALDataSet6.DataSetName = "AUDIOVISUALDataSet6";
+            this.aUDIOVISUALDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipoConexionesTableAdapter
+            // 
+            this.tipoConexionesTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -148,11 +148,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TipoConexionLista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TipoConexionLista";
             this.Load += new System.EventHandler(this.TipoConexionLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoConexionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
