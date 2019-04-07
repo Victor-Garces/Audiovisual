@@ -34,7 +34,7 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
                 Empleado_Id = (int) cmbEmpleados.SelectedValue,
                 Estado = false,
                 Equipo_Id = (int) cmbEquipos.SelectedValue,
-                Comentario = txtComentario.Text,
+                Comentario = "",
                 FechaPrestamo = dtFechaPrestamo.Value,
                 Usuario_Id = (int) cmbUsuarios.SelectedValue
             };
