@@ -20,13 +20,16 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
         {
             // TODO: This line of code loads data into the 'aUDIOVISUALDataSet7.RentaDevoluciones' table. You can move, or remove it, as needed.
             this.rentaDevolucionesTableAdapter.Fill(this.aUDIOVISUALDataSet7.RentaDevoluciones);
+            // TODO: This line of code loads data into the 'aUDIOVISUALDataSet7.RentaDevoluciones' table. You can move, or remove it, as needed.
+            this.rentaDevolucionesTableAdapter.Fill(this.aUDIOVISUALDataSet7.RentaDevoluciones);
+            // TODO: This line of code loads data into the 'aUDIOVISUALDataSet7.RentaDevoluciones' table. You can move, or remove it, as needed.
+            this.rentaDevolucionesTableAdapter.Fill(this.aUDIOVISUALDataSet7.RentaDevoluciones);
             var bindingSource = new BindingSource
             {
                 DataSource = dataGridView1.DataSource,
                 Filter = "Estado = false"
             };
             dataGridView1.DataSource = bindingSource;
-
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,6 +52,13 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
                 };
                 dataGridView1.DataSource = bindingSource;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var rentaCrud = new RentaCrud();
+            rentaCrud.Show();
+            Hide();
         }
     }
 }

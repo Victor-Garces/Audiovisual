@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rentaDevolucionesTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.aUDIOVISUALDataSet7 = new WindowsFormsApp1.AUDIOVISUALDataSet7();
             this.rentaDevolucionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rentaDevolucionesTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empleadoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,12 +43,33 @@
             this.fechaDevolucionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comentarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentaDevolucionesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cmbTipo
+            // 
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Location = new System.Drawing.Point(78, 25);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipo.TabIndex = 1;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(425, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Crear renta";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rentaDevolucionesTableAdapter
+            // 
+            this.rentaDevolucionesTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView1
             // 
@@ -62,10 +85,10 @@
             this.comentarioDataGridViewTextBoxColumn,
             this.estadoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.rentaDevolucionesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(78, 70);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(659, 289);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(447, 244);
+            this.dataGridView1.TabIndex = 3;
             // 
             // aUDIOVISUALDataSet7
             // 
@@ -76,10 +99,6 @@
             // 
             this.rentaDevolucionesBindingSource.DataMember = "RentaDevoluciones";
             this.rentaDevolucionesBindingSource.DataSource = this.aUDIOVISUALDataSet7;
-            // 
-            // rentaDevolucionesTableAdapter
-            // 
-            this.rentaDevolucionesTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -130,32 +149,14 @@
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
             // 
-            // cmbTipo
-            // 
-            this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(78, 25);
-            this.cmbTipo.Name = "cmbTipo";
-            this.cmbTipo.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipo.TabIndex = 1;
-            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.cmbTipo_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(637, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // RentaDevolucionesLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbTipo);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "RentaDevolucionesLista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RentaDevolucionesLista";
@@ -168,11 +169,12 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.Button button1;
+        private AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter rentaDevolucionesTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private AUDIOVISUALDataSet7 aUDIOVISUALDataSet7;
         private System.Windows.Forms.BindingSource rentaDevolucionesBindingSource;
-        private AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter rentaDevolucionesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn empleadoIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoIdDataGridViewTextBoxColumn;
@@ -181,7 +183,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDevolucionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn comentarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.Button button1;
     }
 }

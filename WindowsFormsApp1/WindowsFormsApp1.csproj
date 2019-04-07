@@ -173,6 +173,12 @@
     <Compile Include="Forms\Modelos\ModeloLista.Designer.cs">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RentaDevoluciones\RentaCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RentaDevoluciones\RentaCrud.Designer.cs">
+      <DependentUpon>RentaCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RentaDevoluciones\RentaDevolucionesLista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,10 @@
     <Compile Include="Migrations\201904070210482_AddedRentaDevolucionesTable.Designer.cs">
       <DependentUpon>201904070210482_AddedRentaDevolucionesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904070241234_UpdateRentaDevoluciones.cs" />
+    <Compile Include="Migrations\201904070241234_UpdateRentaDevoluciones.Designer.cs">
+      <DependentUpon>201904070241234_UpdateRentaDevoluciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -262,6 +272,9 @@
     <EmbeddedResource Include="Forms\Modelos\ModeloLista.resx">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RentaDevoluciones\RentaCrud.resx">
+      <DependentUpon>RentaCrud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RentaDevoluciones\RentaDevolucionesLista.resx">
       <DependentUpon>RentaDevolucionesLista.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904070210482_AddedRentaDevolucionesTable.resx">
       <DependentUpon>201904070210482_AddedRentaDevolucionesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070241234_UpdateRentaDevoluciones.resx">
+      <DependentUpon>201904070241234_UpdateRentaDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

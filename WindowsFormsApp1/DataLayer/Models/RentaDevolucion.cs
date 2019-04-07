@@ -13,8 +13,8 @@ namespace WindowsFormsApp1.DataLayer.Models
         public Equipo Equipo { get; set; }
         public int Usuario_Id { get; set; }
         public Usuario Usuario { get; set; }
-        public DateTime FechaPrestamo { get; set; }
-        public DateTime FechaDevolucion { get; set; }
+        public DateTime? FechaPrestamo { get; set; }
+        public DateTime? FechaDevolucion { get; set; }
         public string Comentario { get; set; }
         public bool Estado { get; set; }
     }
