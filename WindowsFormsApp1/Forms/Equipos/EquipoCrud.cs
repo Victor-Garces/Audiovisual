@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.Forms.Equipos
             InitializeComponent();
             using (var context = new DianaContext())
             {
-                cmbTipoConexion.DataSource = context.TipoEquipos.ToList();
+                cmbTipoConexion.DataSource = context.TipoConexiones.ToList();
                 cmbTipoConexion.DisplayMember = "descripcion";
                 cmbTipoConexion.ValueMember = "id";
 
@@ -45,6 +45,14 @@ namespace WindowsFormsApp1.Forms.Equipos
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (Form1.usuario.IsAdmin != true)
+            {
+                string asd = "Usted no tiene permisos para crear usuarios";
+                string zxc = "Error";
+                MessageBox.Show(asd, zxc);
+                return;
+            }
+
             var equipo = new Equipo
             {
                 TipoConexion_Id = (int) cmbTipoConexion.SelectedValue,
@@ -56,6 +64,7 @@ namespace WindowsFormsApp1.Forms.Equipos
                 Estado = chkStatus.Checked,
             };
 
+
             using (var context = new DianaContext())
             {
                 context.Equipos.Add(equipo);
@@ -65,7 +74,7 @@ namespace WindowsFormsApp1.Forms.Equipos
             var equiposLista = new EquiposLista();
             equiposLista.Show();
             Hide();
-
+            
             string message = "Equipo creado";
             string title = "Exito";
             MessageBox.Show(message, title);
@@ -78,6 +87,18 @@ namespace WindowsFormsApp1.Forms.Equipos
                 MessageBox.Show("Por favor solo introduzca números.");
                 txtNoSerial.Text = txtNoSerial.Text.Remove(txtNoSerial.Text.Length - 1);
             }
+        }
+
+        private void cmbTipoConexion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+            Hide();
         }
     }
 }

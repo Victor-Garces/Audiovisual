@@ -89,6 +89,7 @@
             this.button4.TabIndex = 54;
             this.button4.Text = "Volver a inicio";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // cmbEmpleados
             // 
@@ -108,6 +109,7 @@
             this.button3.TabIndex = 52;
             this.button3.Text = "Cerrar sesión";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -124,6 +126,7 @@
             // 
             this.dtFechaPrestamo.Location = new System.Drawing.Point(152, 187);
             this.dtFechaPrestamo.Margin = new System.Windows.Forms.Padding(2);
+            this.dtFechaPrestamo.MinDate = new System.DateTime(2019, 4, 7, 0, 0, 0, 0);
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
             this.dtFechaPrestamo.Size = new System.Drawing.Size(151, 20);
             this.dtFechaPrestamo.TabIndex = 48;
@@ -176,6 +179,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RentaCrud";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RentaCrud";
             this.ResumeLayout(false);
             this.PerformLayout();

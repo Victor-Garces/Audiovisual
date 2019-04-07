@@ -19,6 +19,14 @@ namespace WindowsFormsApp1.Forms.Usuario
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Form1.usuario.IsAdmin != true)
+            {
+                string asd = "Usted no tiene permisos para crear usuarios";
+                string zxc = "Error";
+                MessageBox.Show(asd, zxc);
+                return;
+            } 
+
             var usuarioCrud = new UsuarioCrud();
             usuarioCrud.Show();
             Hide();

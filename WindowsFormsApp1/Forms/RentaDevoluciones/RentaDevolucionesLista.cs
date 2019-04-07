@@ -4,13 +4,24 @@ using System.Windows.Forms;
 using WindowsFormsApp1.DataLayer;
 using WindowsFormsApp1.DataLayer.Enums;
 using WindowsFormsApp1.DataLayer.Models;
+using System.IO;
+using System.Diagnostics;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+
 
 namespace WindowsFormsApp1.Forms.RentaDevoluciones
 {
     public partial class RentaDevolucionesLista : Form
     {
+        DataTable oDt = new DataTable();
+        SqlConnection oCon = null;
+
         public RentaDevolucionesLista()
         {
+         
+
             InitializeComponent();
             cmbTipo.DataSource = new[]
             {
@@ -29,6 +40,21 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
                 Filter = "Estado = false"
             };
             dataGridView1.DataSource = bindingSource;
+        }
+
+     
+
+        private void ejecutarConsulta(string pFiltro)
+        {
+            string sSQL = "  select * from RentaDevoluciones";
+            if (pFiltro.Trim().Length > 0)
+                sSQL += pFiltro;
+
+            SqlDataAdapter oDa = new SqlDataAdapter(sSQL, oCon);
+            oDt = new DataTable();
+            oDa.Fill(oDt);
+            dataGridView1.DataSource = oDt;
+            dataGridView1.Refresh();
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,6 +81,7 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
 
         private void button1_Click(object sender, EventArgs e)
         {
+     
             var rentaCrud = new RentaCrud();
             rentaCrud.Show();
             Hide();
@@ -67,6 +94,8 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
 
         private void button2_Click(object sender, EventArgs e)
         {
+       
+
             var selected = dataGridView1.Rows[0].Cells[0].Value;
 
             if (selected != null)
@@ -104,5 +133,40 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
             main.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            writeFileHeader("sep=,");//Primera linea 
+            writeFileLine("Prestamo_id, Empleado_id, Equipo_id, Usuario_id,FechaPrestamo,FechaDevolucion,Comentarios,Estado,Empleado_id1,Equipo_id1,Usuario_id1"); // segunda linea 
+
+            foreach (DataRow row in oDt.Rows) //filas detalle 
+            {
+                string linea = "";
+                foreach (DataColumn dc in oDt.Columns)
+                {
+                    linea += row[dc].ToString() + ",";
+                }
+                writeFileLine(linea);
+            }
+
+            Process.Start(@"C:\ReporteRentaDevolucion\ReporterRD.csv");
+        }
+
+        private void writeFileLine(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.AppendText("C:\\ReporteRentaDevolucion\\ReporterRD.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+
+        private void writeFileHeader(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.CreateText("C:\\ReporteRentaDevolucion\\ReporterRD.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+
     }
 }

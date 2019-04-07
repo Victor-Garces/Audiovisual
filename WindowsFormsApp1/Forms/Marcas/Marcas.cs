@@ -26,6 +26,15 @@ namespace WindowsFormsApp1.Forms.Marcas
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (Form1.usuario.IsAdmin != true)
+            {
+                string asd = "Usted no tiene permisos para crear usuarios";
+                string zxc = "Error";
+                MessageBox.Show(asd, zxc);
+                return;
+            }
+
             var marcaCrud = new MarcaCrud();
             marcaCrud.Show();
             Hide();

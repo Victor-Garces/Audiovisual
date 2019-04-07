@@ -144,5 +144,15 @@ namespace WindowsFormsApp1.Forms.Usuario
             form1.Show();
             Hide();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chxActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

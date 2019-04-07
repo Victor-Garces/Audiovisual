@@ -34,9 +34,6 @@
             this.rentaDevolucionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet71 = new WindowsFormsApp1.AUDIOVISUALDataSet7();
-            this.rentaDevolucionesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rentaDevolucionesTableAdapter1 = new WindowsFormsApp1.AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,17 +42,23 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.rentaDevolucionesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet71 = new WindowsFormsApp1.AUDIOVISUALDataSet7();
+            this.rentaDevolucionesTableAdapter1 = new WindowsFormsApp1.AUDIOVISUALDataSet7TableAdapters.RentaDevolucionesTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.rentaDevolucionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet71)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentaDevolucionesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet71)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(404, 30);
+            this.cmbTipo.Location = new System.Drawing.Point(451, 29);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(121, 21);
             this.cmbTipo.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(425, 331);
+            this.button1.Location = new System.Drawing.Point(472, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 2;
@@ -77,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(78, 331);
+            this.button2.Location = new System.Drawing.Point(366, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 4;
@@ -99,24 +102,10 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewCheckBoxColumn1});
             this.dataGridView1.DataSource = this.rentaDevolucionesBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(78, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 259);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // aUDIOVISUALDataSet71
-            // 
-            this.aUDIOVISUALDataSet71.DataSetName = "AUDIOVISUALDataSet7";
-            this.aUDIOVISUALDataSet71.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rentaDevolucionesBindingSource1
-            // 
-            this.rentaDevolucionesBindingSource1.DataMember = "RentaDevoluciones";
-            this.rentaDevolucionesBindingSource1.DataSource = this.aUDIOVISUALDataSet71;
-            // 
-            // rentaDevolucionesTableAdapter1
-            // 
-            this.rentaDevolucionesTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -167,9 +156,23 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Estado";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
+            // rentaDevolucionesBindingSource1
+            // 
+            this.rentaDevolucionesBindingSource1.DataMember = "RentaDevoluciones";
+            this.rentaDevolucionesBindingSource1.DataSource = this.aUDIOVISUALDataSet71;
+            // 
+            // aUDIOVISUALDataSet71
+            // 
+            this.aUDIOVISUALDataSet71.DataSetName = "AUDIOVISUALDataSet7";
+            this.aUDIOVISUALDataSet71.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rentaDevolucionesTableAdapter1
+            // 
+            this.rentaDevolucionesTableAdapter1.ClearBeforeFill = true;
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(78, 28);
+            this.button3.Location = new System.Drawing.Point(32, 27);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 23);
             this.button3.TabIndex = 6;
@@ -177,11 +180,42 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(414, 378);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 23);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Exportar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(402, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Buscar:";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(33, 331);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Actualizar estado";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // RentaDevolucionesLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(600, 413);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -193,9 +227,10 @@
             this.Load += new System.EventHandler(this.RentaDevolucionesLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rentaDevolucionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet71)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentaDevolucionesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet71)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -227,5 +262,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button5;
     }
 }
