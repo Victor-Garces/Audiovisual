@@ -165,6 +165,7 @@
             this.txtNoSerial.Name = "txtNoSerial";
             this.txtNoSerial.Size = new System.Drawing.Size(256, 20);
             this.txtNoSerial.TabIndex = 12;
+            this.txtNoSerial.TextChanged += new System.EventHandler(this.txtNoSerial_TextChanged);
             // 
             // txtServiceTag
             // 

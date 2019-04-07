@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet2 = new WindowsFormsApp1.AUDIOVISUALDataSet2();
-            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.equiposTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet2TableAdapters.EquiposTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noSerialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +38,13 @@
             this.modeloIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoConexionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet2 = new WindowsFormsApp1.AUDIOVISUALDataSet2();
+            this.equiposTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet2TableAdapters.EquiposTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,24 +61,10 @@
             this.tipoConexionIdDataGridViewTextBoxColumn,
             this.estadoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.equiposBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(596, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(500, 248);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // aUDIOVISUALDataSet2
-            // 
-            this.aUDIOVISUALDataSet2.DataSetName = "AUDIOVISUALDataSet2";
-            this.aUDIOVISUALDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // equiposBindingSource
-            // 
-            this.equiposBindingSource.DataMember = "Equipos";
-            this.equiposBindingSource.DataSource = this.aUDIOVISUALDataSet2;
-            // 
-            // equiposTableAdapter
-            // 
-            this.equiposTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -129,9 +115,23 @@
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
             // 
+            // equiposBindingSource
+            // 
+            this.equiposBindingSource.DataMember = "Equipos";
+            this.equiposBindingSource.DataSource = this.aUDIOVISUALDataSet2;
+            // 
+            // aUDIOVISUALDataSet2
+            // 
+            this.aUDIOVISUALDataSet2.DataSetName = "AUDIOVISUALDataSet2";
+            this.aUDIOVISUALDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // equiposTableAdapter
+            // 
+            this.equiposTableAdapter.ClearBeforeFill = true;
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(616, 350);
+            this.button1.Location = new System.Drawing.Point(428, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 1;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "EquiposLista";
@@ -151,8 +151,8 @@
             this.Text = "EquiposLista";
             this.Load += new System.EventHandler(this.EquiposLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -70,5 +70,14 @@ namespace WindowsFormsApp1.Forms.Equipos
             string title = "Exito";
             MessageBox.Show(message, title);
         }
+
+        private void txtNoSerial_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtNoSerial.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor solo introduzca números.");
+                txtNoSerial.Text = txtNoSerial.Text.Remove(txtNoSerial.Text.Length - 1);
+            }
+        }
     }
 }

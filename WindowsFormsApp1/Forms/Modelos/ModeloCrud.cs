@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.Forms.Modelos
 
             using (var context = new DianaContext())
             {
-                modelo.Marca = context.Marcas.FirstOrDefault(marca => marca.Id == (int) cmbMarca.SelectedValue);
+                modelo.Marca = context.Marcas.FirstOrDefault(marca => marca.Id == (int)cmbMarca.SelectedValue);
                 context.Modelos.Add(modelo);
                 context.SaveChanges();
             }
@@ -41,6 +41,11 @@ namespace WindowsFormsApp1.Forms.Modelos
             string message = "Modelo creado";
             string title = "Exito";
             MessageBox.Show(message, title);
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

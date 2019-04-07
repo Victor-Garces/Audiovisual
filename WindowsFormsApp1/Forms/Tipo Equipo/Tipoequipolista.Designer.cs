@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet4 = new WindowsFormsApp1.AUDIOVISUALDataSet4();
-            this.tipoEquiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoEquiposTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet4TableAdapters.TipoEquiposTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoEquiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet4 = new WindowsFormsApp1.AUDIOVISUALDataSet4();
+            this.tipoEquiposTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet4TableAdapters.TipoEquiposTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoEquiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -59,20 +59,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(531, 228);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // aUDIOVISUALDataSet4
-            // 
-            this.aUDIOVISUALDataSet4.DataSetName = "AUDIOVISUALDataSet4";
-            this.aUDIOVISUALDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoEquiposBindingSource
-            // 
-            this.tipoEquiposBindingSource.DataMember = "TipoEquipos";
-            this.tipoEquiposBindingSource.DataSource = this.aUDIOVISUALDataSet4;
-            // 
-            // tipoEquiposTableAdapter
-            // 
-            this.tipoEquiposTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -92,6 +78,20 @@
             this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "Estado";
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
+            // 
+            // tipoEquiposBindingSource
+            // 
+            this.tipoEquiposBindingSource.DataMember = "TipoEquipos";
+            this.tipoEquiposBindingSource.DataSource = this.aUDIOVISUALDataSet4;
+            // 
+            // aUDIOVISUALDataSet4
+            // 
+            this.aUDIOVISUALDataSet4.DataSetName = "AUDIOVISUALDataSet4";
+            this.aUDIOVISUALDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipoEquiposTableAdapter
+            // 
+            this.tipoEquiposTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -135,6 +135,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Crear Tipo de Equipo";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Tipoequipolista
             // 
@@ -152,8 +153,8 @@
             this.Text = "Tipoequipolista";
             this.Load += new System.EventHandler(this.Tipoequipolista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoEquiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

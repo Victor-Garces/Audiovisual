@@ -23,5 +23,12 @@ namespace WindowsFormsApp1.Forms.Tipo_Equipo
             this.tipoEquiposTableAdapter.Fill(this.aUDIOVISUALDataSet4.TipoEquipos);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var tipoEquipoCrud = new TipoEquipoCrud();
+            tipoEquipoCrud.Show();
+            Hide();
+        }
     }
 }
