@@ -23,5 +23,12 @@ namespace WindowsFormsApp1.Forms.Tipo_Conexiones
             this.tipoConexionesTableAdapter.Fill(this.aUDIOVISUALDataSet6.TipoConexiones);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var tipoConexionCrud = new TipoConexionCrud();
+            tipoConexionCrud.Show();
+            Hide();
+        }
     }
 }
