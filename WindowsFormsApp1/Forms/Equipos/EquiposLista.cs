@@ -47,5 +47,10 @@ namespace WindowsFormsApp1.Forms.Equipos
             main.Show();
             Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
