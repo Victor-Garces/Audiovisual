@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.aUDIOVISUALDataSet2 = new WindowsFormsApp1.AUDIOVISUALDataSet2();
             this.equiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -36,16 +37,26 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noSerialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoTecnologiaConexionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tipoEquipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tipoTecnologiaConexionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoConexionIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(584, 388);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 28);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Crear equipo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -55,16 +66,16 @@
             this.idDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
             this.noSerialDataGridViewTextBoxColumn,
-            this.marcaDataGridViewTextBoxColumn,
-            this.modeloDataGridViewTextBoxColumn,
-            this.tipoTecnologiaConexionDataGridViewTextBoxColumn,
             this.estadoDataGridViewCheckBoxColumn,
-            this.tipoEquipoIdDataGridViewTextBoxColumn});
+            this.tipoEquipoIdDataGridViewTextBoxColumn,
+            this.tipoTecnologiaConexionIdDataGridViewTextBoxColumn,
+            this.tipoConexionIdDataGridViewTextBoxColumn,
+            this.marcaIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.equiposBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(74, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(94, 77);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(622, 302);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(602, 306);
+            this.dataGridView1.TabIndex = 6;
             // 
             // aUDIOVISUALDataSet2
             // 
@@ -99,24 +110,6 @@
             this.noSerialDataGridViewTextBoxColumn.HeaderText = "NoSerial";
             this.noSerialDataGridViewTextBoxColumn.Name = "noSerialDataGridViewTextBoxColumn";
             // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            // 
-            // modeloDataGridViewTextBoxColumn
-            // 
-            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
-            // 
-            // tipoTecnologiaConexionDataGridViewTextBoxColumn
-            // 
-            this.tipoTecnologiaConexionDataGridViewTextBoxColumn.DataPropertyName = "TipoTecnologiaConexion";
-            this.tipoTecnologiaConexionDataGridViewTextBoxColumn.HeaderText = "TipoTecnologiaConexion";
-            this.tipoTecnologiaConexionDataGridViewTextBoxColumn.Name = "tipoTecnologiaConexionDataGridViewTextBoxColumn";
-            // 
             // estadoDataGridViewCheckBoxColumn
             // 
             this.estadoDataGridViewCheckBoxColumn.DataPropertyName = "Estado";
@@ -129,24 +122,31 @@
             this.tipoEquipoIdDataGridViewTextBoxColumn.HeaderText = "TipoEquipo_Id";
             this.tipoEquipoIdDataGridViewTextBoxColumn.Name = "tipoEquipoIdDataGridViewTextBoxColumn";
             // 
-            // button1
+            // tipoTecnologiaConexionIdDataGridViewTextBoxColumn
             // 
-            this.button1.Location = new System.Drawing.Point(584, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 28);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Crear equipo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tipoTecnologiaConexionIdDataGridViewTextBoxColumn.DataPropertyName = "TipoTecnologiaConexion_Id";
+            this.tipoTecnologiaConexionIdDataGridViewTextBoxColumn.HeaderText = "TipoTecnologiaConexion_Id";
+            this.tipoTecnologiaConexionIdDataGridViewTextBoxColumn.Name = "tipoTecnologiaConexionIdDataGridViewTextBoxColumn";
+            // 
+            // tipoConexionIdDataGridViewTextBoxColumn
+            // 
+            this.tipoConexionIdDataGridViewTextBoxColumn.DataPropertyName = "TipoConexion_Id";
+            this.tipoConexionIdDataGridViewTextBoxColumn.HeaderText = "TipoConexion_Id";
+            this.tipoConexionIdDataGridViewTextBoxColumn.Name = "tipoConexionIdDataGridViewTextBoxColumn";
+            // 
+            // marcaIdDataGridViewTextBoxColumn
+            // 
+            this.marcaIdDataGridViewTextBoxColumn.DataPropertyName = "Marca_Id";
+            this.marcaIdDataGridViewTextBoxColumn.HeaderText = "Marca_Id";
+            this.marcaIdDataGridViewTextBoxColumn.Name = "marcaIdDataGridViewTextBoxColumn";
             // 
             // EquiposLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
             this.Name = "EquiposLista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EquiposLista";
@@ -159,7 +159,7 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private AUDIOVISUALDataSet2 aUDIOVISUALDataSet2;
         private System.Windows.Forms.BindingSource equiposBindingSource;
@@ -167,11 +167,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noSerialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTecnologiaConexionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoEquipoIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTecnologiaConexionIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoConexionIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaIdDataGridViewTextBoxColumn;
     }
 }

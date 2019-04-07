@@ -213,6 +213,18 @@
     <Compile Include="Migrations\201904070034342_First.Designer.cs">
       <DependentUpon>201904070034342_First.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904070043018_ChangeDataTypeOfEquipoTable.cs" />
+    <Compile Include="Migrations\201904070043018_ChangeDataTypeOfEquipoTable.Designer.cs">
+      <DependentUpon>201904070043018_ChangeDataTypeOfEquipoTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070044417_AddedForeignKeysEquipo.cs" />
+    <Compile Include="Migrations\201904070044417_AddedForeignKeysEquipo.Designer.cs">
+      <DependentUpon>201904070044417_AddedForeignKeysEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904070046411_AddedMoreForeignKeysEquipo.cs" />
+    <Compile Include="Migrations\201904070046411_AddedMoreForeignKeysEquipo.Designer.cs">
+      <DependentUpon>201904070046411_AddedMoreForeignKeysEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,6 +281,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904070034342_First.resx">
       <DependentUpon>201904070034342_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070043018_ChangeDataTypeOfEquipoTable.resx">
+      <DependentUpon>201904070043018_ChangeDataTypeOfEquipoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070044417_AddedForeignKeysEquipo.resx">
+      <DependentUpon>201904070044417_AddedForeignKeysEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070046411_AddedMoreForeignKeysEquipo.resx">
+      <DependentUpon>201904070046411_AddedMoreForeignKeysEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
