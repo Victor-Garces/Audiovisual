@@ -36,11 +36,11 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noSerialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoTecnologiaConexionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tipoEquipoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equiposBindingSource)).BeginInit();
@@ -54,16 +54,15 @@
             this.idDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn,
             this.noSerialDataGridViewTextBoxColumn,
-            this.tipoEquipoDataGridViewTextBoxColumn,
             this.marcaDataGridViewTextBoxColumn,
             this.modeloDataGridViewTextBoxColumn,
             this.tipoTecnologiaConexionDataGridViewTextBoxColumn,
-            this.estadoDataGridViewCheckBoxColumn});
+            this.estadoDataGridViewCheckBoxColumn,
+            this.tipoEquipoIdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.equiposBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 67);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(716, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(678, 335);
             this.dataGridView1.TabIndex = 0;
             // 
             // aUDIOVISUALDataSet2
@@ -99,12 +98,6 @@
             this.noSerialDataGridViewTextBoxColumn.HeaderText = "NoSerial";
             this.noSerialDataGridViewTextBoxColumn.Name = "noSerialDataGridViewTextBoxColumn";
             // 
-            // tipoEquipoDataGridViewTextBoxColumn
-            // 
-            this.tipoEquipoDataGridViewTextBoxColumn.DataPropertyName = "TipoEquipo";
-            this.tipoEquipoDataGridViewTextBoxColumn.HeaderText = "TipoEquipo";
-            this.tipoEquipoDataGridViewTextBoxColumn.Name = "tipoEquipoDataGridViewTextBoxColumn";
-            // 
             // marcaDataGridViewTextBoxColumn
             // 
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
@@ -129,9 +122,15 @@
             this.estadoDataGridViewCheckBoxColumn.HeaderText = "Estado";
             this.estadoDataGridViewCheckBoxColumn.Name = "estadoDataGridViewCheckBoxColumn";
             // 
+            // tipoEquipoIdDataGridViewTextBoxColumn
+            // 
+            this.tipoEquipoIdDataGridViewTextBoxColumn.DataPropertyName = "TipoEquipo_Id";
+            this.tipoEquipoIdDataGridViewTextBoxColumn.HeaderText = "TipoEquipo_Id";
+            this.tipoEquipoIdDataGridViewTextBoxColumn.Name = "tipoEquipoIdDataGridViewTextBoxColumn";
+            // 
             // EquiposLista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
@@ -155,10 +154,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noSerialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoEquipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoTecnologiaConexionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estadoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoEquipoIdDataGridViewTextBoxColumn;
     }
 }
