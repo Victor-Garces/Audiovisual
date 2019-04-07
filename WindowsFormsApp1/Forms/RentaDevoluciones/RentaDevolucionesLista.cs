@@ -17,6 +17,7 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
     {
         DataTable oDt = new DataTable();
         SqlConnection oCon = null;
+        private string ruta = @"D:\Victor\ReporterRD.csv";
 
         public RentaDevolucionesLista()
         {
@@ -136,37 +137,55 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
 
         private void button4_Click(object sender, EventArgs e)
         {
-            writeFileHeader("sep=,");//Primera linea 
-            writeFileLine("Prestamo_id, Empleado_id, Equipo_id, Usuario_id,FechaPrestamo,FechaDevolucion,Comentarios,Estado,Empleado_id1,Equipo_id1,Usuario_id1"); // segunda linea 
-
-            foreach (DataRow row in oDt.Rows) //filas detalle 
+            try
             {
-                string linea = "";
-                foreach (DataColumn dc in oDt.Columns)
+                StreamWriter csvFileWriter = new StreamWriter(ruta, false);
+
+                string columnHeaderText = "";
+
+                int countColumn = dataGridView1.ColumnCount - 1;
+
+                if (countColumn >= 0)
                 {
-                    linea += row[dc].ToString() + ",";
+                    columnHeaderText = dataGridView1.Columns[0].HeaderText;
                 }
-                writeFileLine(linea);
+
+                for (int i = 1; i <= countColumn; i++)
+                {
+                    columnHeaderText = columnHeaderText + ',' + dataGridView1.Columns[i].HeaderText;
+                }
+
+
+                csvFileWriter.WriteLine(columnHeaderText);
+
+                foreach (DataGridViewRow dataRowObject in dataGridView1.Rows)
+                {
+                    if (!dataRowObject.IsNewRow)
+                    {
+                        string dataFromGrid = "";
+
+                        dataFromGrid = dataRowObject.Cells[0].Value.ToString();
+
+                        for (int i = 1; i <= countColumn; i++)
+                        {
+                            dataFromGrid = dataFromGrid + ',' + dataRowObject.Cells[i].Value.ToString();
+
+                            csvFileWriter.WriteLine(dataFromGrid);
+                        }
+                    }
+                }
+
+                csvFileWriter.Flush();
+                csvFileWriter.Close();
+
+                string message = "Exportación completada";
+                string title = "Error";
+                MessageBox.Show(message, title);
             }
-
-            Process.Start(@"C:\ReporteRentaDevolucion\ReporterRD.csv");
-        }
-
-        private void writeFileLine(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.AppendText("C:\\ReporteRentaDevolucion\\ReporterRD.csv"))
+            catch (Exception exceptionObject)
             {
-                w.WriteLine(pLine);
+                MessageBox.Show(exceptionObject.ToString());
             }
         }
-
-        private void writeFileHeader(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.CreateText("C:\\ReporteRentaDevolucion\\ReporterRD.csv"))
-            {
-                w.WriteLine(pLine);
-            }
-        }
-
     }
 }
