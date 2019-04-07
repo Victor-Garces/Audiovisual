@@ -27,25 +27,25 @@ namespace WindowsFormsApp1.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Descripcion = c.String(),
                         NoSerial = c.Int(nullable: false),
-                        Marca = c.String(),
-                        Modelo = c.String(),
-                        TipoTecnologiaConexion = c.Int(nullable: false),
+                        TipoEquipo_Id = c.Int(nullable: false),
+                        Marca_Id = c.Int(nullable: false),
+                        Modelo_Id = c.Int(nullable: false),
+                        TipoConexion_Id = c.Int(nullable: false),
                         Estado = c.Boolean(nullable: false),
-                        TipoEquipo_Id = c.Int(),
+                        Marca_Id1 = c.Int(),
+                        Modelo_Id1 = c.Int(),
+                        TipoConexion_Id1 = c.Int(),
+                        TipoEquipo_Id1 = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.TipoEquipos", t => t.TipoEquipo_Id)
-                .Index(t => t.TipoEquipo_Id);
-            
-            CreateTable(
-                "dbo.TipoEquipos",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Descripcion = c.String(),
-                        Estado = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
+                .ForeignKey("dbo.Marcas", t => t.Marca_Id1)
+                .ForeignKey("dbo.Modelos", t => t.Modelo_Id1)
+                .ForeignKey("dbo.TipoConexiones", t => t.TipoConexion_Id1)
+                .ForeignKey("dbo.TipoEquipos", t => t.TipoEquipo_Id1)
+                .Index(t => t.Marca_Id1)
+                .Index(t => t.Modelo_Id1)
+                .Index(t => t.TipoConexion_Id1)
+                .Index(t => t.TipoEquipo_Id1);
             
             CreateTable(
                 "dbo.Marcas",
@@ -81,6 +81,16 @@ namespace WindowsFormsApp1.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.TipoEquipos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Descripcion = c.String(),
+                        Estado = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Usuarios",
                 c => new
                     {
@@ -100,15 +110,21 @@ namespace WindowsFormsApp1.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.Equipos", "TipoEquipo_Id1", "dbo.TipoEquipos");
+            DropForeignKey("dbo.Equipos", "TipoConexion_Id1", "dbo.TipoConexiones");
+            DropForeignKey("dbo.Equipos", "Modelo_Id1", "dbo.Modelos");
             DropForeignKey("dbo.Modelos", "Marca_Id", "dbo.Marcas");
-            DropForeignKey("dbo.Equipos", "TipoEquipo_Id", "dbo.TipoEquipos");
+            DropForeignKey("dbo.Equipos", "Marca_Id1", "dbo.Marcas");
             DropIndex("dbo.Modelos", new[] { "Marca_Id" });
-            DropIndex("dbo.Equipos", new[] { "TipoEquipo_Id" });
+            DropIndex("dbo.Equipos", new[] { "TipoEquipo_Id1" });
+            DropIndex("dbo.Equipos", new[] { "TipoConexion_Id1" });
+            DropIndex("dbo.Equipos", new[] { "Modelo_Id1" });
+            DropIndex("dbo.Equipos", new[] { "Marca_Id1" });
             DropTable("dbo.Usuarios");
+            DropTable("dbo.TipoEquipos");
             DropTable("dbo.TipoConexiones");
             DropTable("dbo.Modelos");
             DropTable("dbo.Marcas");
-            DropTable("dbo.TipoEquipos");
             DropTable("dbo.Equipos");
             DropTable("dbo.Empleados");
         }

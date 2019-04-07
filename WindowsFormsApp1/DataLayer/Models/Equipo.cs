@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.DataLayer.Models
         public int Modelo_Id { get; set; }
         public Modelo Modelo { get; set; }
         public int TipoConexion_Id { get; set; }
-        public TipoConexion TipoTecnologiaConexion { get; set; }
+        public TipoConexion TipoConexion { get; set; }
         public bool Estado { get; set; }
     }
 }

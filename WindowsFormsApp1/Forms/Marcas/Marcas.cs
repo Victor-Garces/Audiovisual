@@ -23,5 +23,12 @@ namespace WindowsFormsApp1.Forms.Marcas
             this.marcasTableAdapter.Fill(this.aUDIOVISUALDataSet3.Marcas);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var marcaCrud = new MarcaCrud();
+            marcaCrud.Show();
+            Hide();
+        }
     }
 }

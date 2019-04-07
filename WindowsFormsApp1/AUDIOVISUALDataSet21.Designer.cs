@@ -285,23 +285,15 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnNoSerial;
             
-            private global::System.Data.DataColumn columnEstado;
-            
             private global::System.Data.DataColumn columnTipoEquipo_Id;
-            
-            private global::System.Data.DataColumn columnTipoTecnologiaConexion_Id;
-            
-            private global::System.Data.DataColumn columnTipoConexion_Id;
-            
-            private global::System.Data.DataColumn columnTipoEquipo_Id1;
             
             private global::System.Data.DataColumn columnMarca_Id;
             
             private global::System.Data.DataColumn columnModelo_Id;
             
-            private global::System.Data.DataColumn columnMarca_Id1;
+            private global::System.Data.DataColumn columnTipoConexion_Id;
             
-            private global::System.Data.DataColumn columnModelo_Id1;
+            private global::System.Data.DataColumn columnEstado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -362,41 +354,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn EstadoColumn {
-                get {
-                    return this.columnEstado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn TipoEquipo_IdColumn {
                 get {
                     return this.columnTipoEquipo_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipoTecnologiaConexion_IdColumn {
-                get {
-                    return this.columnTipoTecnologiaConexion_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipoConexion_IdColumn {
-                get {
-                    return this.columnTipoConexion_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TipoEquipo_Id1Column {
-                get {
-                    return this.columnTipoEquipo_Id1;
                 }
             }
             
@@ -418,17 +378,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Marca_Id1Column {
+            public global::System.Data.DataColumn TipoConexion_IdColumn {
                 get {
-                    return this.columnMarca_Id1;
+                    return this.columnTipoConexion_Id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Modelo_Id1Column {
+            public global::System.Data.DataColumn EstadoColumn {
                 get {
-                    return this.columnModelo_Id1;
+                    return this.columnEstado;
                 }
             }
             
@@ -469,21 +429,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EquiposRow AddEquiposRow(string Descripcion, int NoSerial, bool Estado, int TipoEquipo_Id, int TipoTecnologiaConexion_Id, int TipoConexion_Id, int TipoEquipo_Id1, int Marca_Id, int Modelo_Id, int Marca_Id1, int Modelo_Id1) {
+            public EquiposRow AddEquiposRow(string Descripcion, int NoSerial, int TipoEquipo_Id, int Marca_Id, int Modelo_Id, int TipoConexion_Id, bool Estado) {
                 EquiposRow rowEquiposRow = ((EquiposRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Descripcion,
                         NoSerial,
-                        Estado,
                         TipoEquipo_Id,
-                        TipoTecnologiaConexion_Id,
-                        TipoConexion_Id,
-                        TipoEquipo_Id1,
                         Marca_Id,
                         Modelo_Id,
-                        Marca_Id1,
-                        Modelo_Id1};
+                        TipoConexion_Id,
+                        Estado};
                 rowEquiposRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEquiposRow);
                 return rowEquiposRow;
@@ -516,15 +472,11 @@ namespace WindowsFormsApp1 {
                 this.columnId = base.Columns["Id"];
                 this.columnDescripcion = base.Columns["Descripcion"];
                 this.columnNoSerial = base.Columns["NoSerial"];
-                this.columnEstado = base.Columns["Estado"];
                 this.columnTipoEquipo_Id = base.Columns["TipoEquipo_Id"];
-                this.columnTipoTecnologiaConexion_Id = base.Columns["TipoTecnologiaConexion_Id"];
-                this.columnTipoConexion_Id = base.Columns["TipoConexion_Id"];
-                this.columnTipoEquipo_Id1 = base.Columns["TipoEquipo_Id1"];
                 this.columnMarca_Id = base.Columns["Marca_Id"];
                 this.columnModelo_Id = base.Columns["Modelo_Id"];
-                this.columnMarca_Id1 = base.Columns["Marca_Id1"];
-                this.columnModelo_Id1 = base.Columns["Modelo_Id1"];
+                this.columnTipoConexion_Id = base.Columns["TipoConexion_Id"];
+                this.columnEstado = base.Columns["Estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -536,24 +488,16 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnDescripcion);
                 this.columnNoSerial = new global::System.Data.DataColumn("NoSerial", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNoSerial);
-                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstado);
                 this.columnTipoEquipo_Id = new global::System.Data.DataColumn("TipoEquipo_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTipoEquipo_Id);
-                this.columnTipoTecnologiaConexion_Id = new global::System.Data.DataColumn("TipoTecnologiaConexion_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoTecnologiaConexion_Id);
-                this.columnTipoConexion_Id = new global::System.Data.DataColumn("TipoConexion_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoConexion_Id);
-                this.columnTipoEquipo_Id1 = new global::System.Data.DataColumn("TipoEquipo_Id1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoEquipo_Id1);
                 this.columnMarca_Id = new global::System.Data.DataColumn("Marca_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMarca_Id);
                 this.columnModelo_Id = new global::System.Data.DataColumn("Modelo_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnModelo_Id);
-                this.columnMarca_Id1 = new global::System.Data.DataColumn("Marca_Id1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMarca_Id1);
-                this.columnModelo_Id1 = new global::System.Data.DataColumn("Modelo_Id1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnModelo_Id1);
+                this.columnTipoConexion_Id = new global::System.Data.DataColumn("TipoConexion_Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoConexion_Id);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -564,11 +508,11 @@ namespace WindowsFormsApp1 {
                 this.columnId.Unique = true;
                 this.columnDescripcion.MaxLength = 2147483647;
                 this.columnNoSerial.AllowDBNull = false;
-                this.columnEstado.AllowDBNull = false;
                 this.columnTipoEquipo_Id.AllowDBNull = false;
-                this.columnTipoConexion_Id.AllowDBNull = false;
                 this.columnMarca_Id.AllowDBNull = false;
                 this.columnModelo_Id.AllowDBNull = false;
+                this.columnTipoConexion_Id.AllowDBNull = false;
+                this.columnEstado.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -749,66 +693,12 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Estado {
-                get {
-                    return ((bool)(this[this.tableEquipos.EstadoColumn]));
-                }
-                set {
-                    this[this.tableEquipos.EstadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int TipoEquipo_Id {
                 get {
                     return ((int)(this[this.tableEquipos.TipoEquipo_IdColumn]));
                 }
                 set {
                     this[this.tableEquipos.TipoEquipo_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TipoTecnologiaConexion_Id {
-                get {
-                    try {
-                        return ((int)(this[this.tableEquipos.TipoTecnologiaConexion_IdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TipoTecnologiaConexion_Id\' in table \'Equipos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEquipos.TipoTecnologiaConexion_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TipoConexion_Id {
-                get {
-                    return ((int)(this[this.tableEquipos.TipoConexion_IdColumn]));
-                }
-                set {
-                    this[this.tableEquipos.TipoConexion_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int TipoEquipo_Id1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableEquipos.TipoEquipo_Id1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TipoEquipo_Id1\' in table \'Equipos\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEquipos.TipoEquipo_Id1Column] = value;
                 }
             }
             
@@ -836,33 +726,23 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Marca_Id1 {
+            public int TipoConexion_Id {
                 get {
-                    try {
-                        return ((int)(this[this.tableEquipos.Marca_Id1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Marca_Id1\' in table \'Equipos\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableEquipos.TipoConexion_IdColumn]));
                 }
                 set {
-                    this[this.tableEquipos.Marca_Id1Column] = value;
+                    this[this.tableEquipos.TipoConexion_IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Modelo_Id1 {
+            public bool Estado {
                 get {
-                    try {
-                        return ((int)(this[this.tableEquipos.Modelo_Id1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Modelo_Id1\' in table \'Equipos\' is DBNull.", e);
-                    }
+                    return ((bool)(this[this.tableEquipos.EstadoColumn]));
                 }
                 set {
-                    this[this.tableEquipos.Modelo_Id1Column] = value;
+                    this[this.tableEquipos.EstadoColumn] = value;
                 }
             }
             
@@ -876,54 +756,6 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDescripcionNull() {
                 this[this.tableEquipos.DescripcionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTipoTecnologiaConexion_IdNull() {
-                return this.IsNull(this.tableEquipos.TipoTecnologiaConexion_IdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTipoTecnologiaConexion_IdNull() {
-                this[this.tableEquipos.TipoTecnologiaConexion_IdColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTipoEquipo_Id1Null() {
-                return this.IsNull(this.tableEquipos.TipoEquipo_Id1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTipoEquipo_Id1Null() {
-                this[this.tableEquipos.TipoEquipo_Id1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsMarca_Id1Null() {
-                return this.IsNull(this.tableEquipos.Marca_Id1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetMarca_Id1Null() {
-                this[this.tableEquipos.Marca_Id1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsModelo_Id1Null() {
-                return this.IsNull(this.tableEquipos.Modelo_Id1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetModelo_Id1Null() {
-                this[this.tableEquipos.Modelo_Id1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1089,82 +921,54 @@ namespace WindowsFormsApp1.AUDIOVISUALDataSet2TableAdapters {
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
             tableMapping.ColumnMappings.Add("NoSerial", "NoSerial");
-            tableMapping.ColumnMappings.Add("Estado", "Estado");
             tableMapping.ColumnMappings.Add("TipoEquipo_Id", "TipoEquipo_Id");
-            tableMapping.ColumnMappings.Add("TipoTecnologiaConexion_Id", "TipoTecnologiaConexion_Id");
-            tableMapping.ColumnMappings.Add("TipoConexion_Id", "TipoConexion_Id");
-            tableMapping.ColumnMappings.Add("TipoEquipo_Id1", "TipoEquipo_Id1");
             tableMapping.ColumnMappings.Add("Marca_Id", "Marca_Id");
             tableMapping.ColumnMappings.Add("Modelo_Id", "Modelo_Id");
-            tableMapping.ColumnMappings.Add("Marca_Id1", "Marca_Id1");
-            tableMapping.ColumnMappings.Add("Modelo_Id1", "Modelo_Id1");
+            tableMapping.ColumnMappings.Add("TipoConexion_Id", "TipoConexion_Id");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Equipos] WHERE (([Id] = @Original_Id) AND ([NoSerial] = @Original_NoSerial) AND ([Estado] = @Original_Estado) AND ([TipoEquipo_Id] = @Original_TipoEquipo_Id) AND ((@IsNull_TipoTecnologiaConexion_Id = 1 AND [TipoTecnologiaConexion_Id] IS NULL) OR ([TipoTecnologiaConexion_Id] = @Original_TipoTecnologiaConexion_Id)) AND ([TipoConexion_Id] = @Original_TipoConexion_Id) AND ((@IsNull_TipoEquipo_Id1 = 1 AND [TipoEquipo_Id1] IS NULL) OR ([TipoEquipo_Id1] = @Original_TipoEquipo_Id1)) AND ([Marca_Id] = @Original_Marca_Id) AND ([Modelo_Id] = @Original_Modelo_Id) AND ((@IsNull_Marca_Id1 = 1 AND [Marca_Id1] IS NULL) OR ([Marca_Id1] = @Original_Marca_Id1)) AND ((@IsNull_Modelo_Id1 = 1 AND [Modelo_Id1] IS NULL) OR ([Modelo_Id1] = @Original_Modelo_Id1)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Equipos] WHERE (([Id] = @Original_Id) AND ([NoSerial] = @Original_NoSerial) AND ([TipoEquipo_Id] = @Original_TipoEquipo_Id) AND ([Marca_Id] = @Original_Marca_Id) AND ([Modelo_Id] = @Original_Modelo_Id) AND ([TipoConexion_Id] = @Original_TipoConexion_Id) AND ([Estado] = @Original_Estado))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NoSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEquipo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Equipos] ([Descripcion], [NoSerial], [Estado], [TipoEquipo_Id], [TipoTecnologiaConexion_Id], [TipoConexion_Id], [TipoEquipo_Id1], [Marca_Id], [Modelo_Id], [Marca_Id1], [Modelo_Id1]) VALUES (@Descripcion, @NoSerial, @Estado, @TipoEquipo_Id, @TipoTecnologiaConexion_Id, @TipoConexion_Id, @TipoEquipo_Id1, @Marca_Id, @Modelo_Id, @Marca_Id1, @Modelo_Id1);
-SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_Id, TipoConexion_Id, TipoEquipo_Id1, Marca_Id, Modelo_Id, Marca_Id1, Modelo_Id1 FROM Equipos WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Equipos] ([Descripcion], [NoSerial], [TipoEquipo_Id], [Marca_Id], [Modelo_Id], [TipoConexion_Id], [Estado]) VALUES (@Descripcion, @NoSerial, @TipoEquipo_Id, @Marca_Id, @Modelo_Id, @TipoConexion_Id, @Estado);
+SELECT Id, Descripcion, NoSerial, TipoEquipo_Id, Marca_Id, Modelo_Id, TipoConexion_Id, Estado FROM Equipos WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEquipo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Equipos] SET [Descripcion] = @Descripcion, [NoSerial] = @NoSerial, [Estado] = @Estado, [TipoEquipo_Id] = @TipoEquipo_Id, [TipoTecnologiaConexion_Id] = @TipoTecnologiaConexion_Id, [TipoConexion_Id] = @TipoConexion_Id, [TipoEquipo_Id1] = @TipoEquipo_Id1, [Marca_Id] = @Marca_Id, [Modelo_Id] = @Modelo_Id, [Marca_Id1] = @Marca_Id1, [Modelo_Id1] = @Modelo_Id1 WHERE (([Id] = @Original_Id) AND ([NoSerial] = @Original_NoSerial) AND ([Estado] = @Original_Estado) AND ([TipoEquipo_Id] = @Original_TipoEquipo_Id) AND ((@IsNull_TipoTecnologiaConexion_Id = 1 AND [TipoTecnologiaConexion_Id] IS NULL) OR ([TipoTecnologiaConexion_Id] = @Original_TipoTecnologiaConexion_Id)) AND ([TipoConexion_Id] = @Original_TipoConexion_Id) AND ((@IsNull_TipoEquipo_Id1 = 1 AND [TipoEquipo_Id1] IS NULL) OR ([TipoEquipo_Id1] = @Original_TipoEquipo_Id1)) AND ([Marca_Id] = @Original_Marca_Id) AND ([Modelo_Id] = @Original_Modelo_Id) AND ((@IsNull_Marca_Id1 = 1 AND [Marca_Id1] IS NULL) OR ([Marca_Id1] = @Original_Marca_Id1)) AND ((@IsNull_Modelo_Id1 = 1 AND [Modelo_Id1] IS NULL) OR ([Modelo_Id1] = @Original_Modelo_Id1)));
-SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_Id, TipoConexion_Id, TipoEquipo_Id1, Marca_Id, Modelo_Id, Marca_Id1, Modelo_Id1 FROM Equipos WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Equipos] SET [Descripcion] = @Descripcion, [NoSerial] = @NoSerial, [TipoEquipo_Id] = @TipoEquipo_Id, [Marca_Id] = @Marca_Id, [Modelo_Id] = @Modelo_Id, [TipoConexion_Id] = @TipoConexion_Id, [Estado] = @Estado WHERE (([Id] = @Original_Id) AND ([NoSerial] = @Original_NoSerial) AND ([TipoEquipo_Id] = @Original_TipoEquipo_Id) AND ([Marca_Id] = @Original_Marca_Id) AND ([Modelo_Id] = @Original_Modelo_Id) AND ([TipoConexion_Id] = @Original_TipoConexion_Id) AND ([Estado] = @Original_Estado));
+SELECT Id, Descripcion, NoSerial, TipoEquipo_Id, Marca_Id, Modelo_Id, TipoConexion_Id, Estado FROM Equipos WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEquipo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NoSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEquipo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoTecnologiaConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoTecnologiaConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoEquipo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoEquipo_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo_Id1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo_Id1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TipoConexion_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TipoConexion_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1181,9 +985,8 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_I" +
-                "d, TipoConexion_Id, TipoEquipo_Id1, Marca_Id, Modelo_Id, Marca_Id1, Modelo_Id1 F" +
-                "ROM dbo.Equipos";
+            this._commandCollection[0].CommandText = "SELECT Id, Descripcion, NoSerial, TipoEquipo_Id, Marca_Id, Modelo_Id, TipoConexio" +
+                "n_Id, Estado FROM dbo.Equipos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1244,46 +1047,14 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_NoSerial, bool Original_Estado, int Original_TipoEquipo_Id, global::System.Nullable<int> Original_TipoTecnologiaConexion_Id, int Original_TipoConexion_Id, global::System.Nullable<int> Original_TipoEquipo_Id1, int Original_Marca_Id, int Original_Modelo_Id, global::System.Nullable<int> Original_Marca_Id1, global::System.Nullable<int> Original_Modelo_Id1) {
+        public virtual int Delete(int Original_Id, int Original_NoSerial, int Original_TipoEquipo_Id, int Original_Marca_Id, int Original_Modelo_Id, int Original_TipoConexion_Id, bool Original_Estado) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_NoSerial));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_Estado));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_TipoEquipo_Id));
-            if ((Original_TipoTecnologiaConexion_Id.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_TipoTecnologiaConexion_Id.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_TipoConexion_Id));
-            if ((Original_TipoEquipo_Id1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_TipoEquipo_Id1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_Marca_Id));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Modelo_Id));
-            if ((Original_Marca_Id1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Marca_Id1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Modelo_Id1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Modelo_Id1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_TipoEquipo_Id));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Marca_Id));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Modelo_Id));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_TipoConexion_Id));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_Estado));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1304,7 +1075,7 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Descripcion, int NoSerial, bool Estado, int TipoEquipo_Id, global::System.Nullable<int> TipoTecnologiaConexion_Id, int TipoConexion_Id, global::System.Nullable<int> TipoEquipo_Id1, int Marca_Id, int Modelo_Id, global::System.Nullable<int> Marca_Id1, global::System.Nullable<int> Modelo_Id1) {
+        public virtual int Insert(string Descripcion, int NoSerial, int TipoEquipo_Id, int Marca_Id, int Modelo_Id, int TipoConexion_Id, bool Estado) {
             if ((Descripcion == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1312,35 +1083,11 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Descripcion));
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(NoSerial));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((bool)(Estado));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(TipoEquipo_Id));
-            if ((TipoTecnologiaConexion_Id.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(TipoTecnologiaConexion_Id.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(TipoEquipo_Id));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Marca_Id));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Modelo_Id));
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(TipoConexion_Id));
-            if ((TipoEquipo_Id1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(TipoEquipo_Id1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Marca_Id));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Modelo_Id));
-            if ((Marca_Id1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Marca_Id1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Modelo_Id1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Modelo_Id1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(Estado));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1361,30 +1108,7 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Descripcion, 
-                    int NoSerial, 
-                    bool Estado, 
-                    int TipoEquipo_Id, 
-                    global::System.Nullable<int> TipoTecnologiaConexion_Id, 
-                    int TipoConexion_Id, 
-                    global::System.Nullable<int> TipoEquipo_Id1, 
-                    int Marca_Id, 
-                    int Modelo_Id, 
-                    global::System.Nullable<int> Marca_Id1, 
-                    global::System.Nullable<int> Modelo_Id1, 
-                    int Original_Id, 
-                    int Original_NoSerial, 
-                    bool Original_Estado, 
-                    int Original_TipoEquipo_Id, 
-                    global::System.Nullable<int> Original_TipoTecnologiaConexion_Id, 
-                    int Original_TipoConexion_Id, 
-                    global::System.Nullable<int> Original_TipoEquipo_Id1, 
-                    int Original_Marca_Id, 
-                    int Original_Modelo_Id, 
-                    global::System.Nullable<int> Original_Marca_Id1, 
-                    global::System.Nullable<int> Original_Modelo_Id1, 
-                    int Id) {
+        public virtual int Update(string Descripcion, int NoSerial, int TipoEquipo_Id, int Marca_Id, int Modelo_Id, int TipoConexion_Id, bool Estado, int Original_Id, int Original_NoSerial, int Original_TipoEquipo_Id, int Original_Marca_Id, int Original_Modelo_Id, int Original_TipoConexion_Id, bool Original_Estado, int Id) {
             if ((Descripcion == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -1392,75 +1116,19 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Descripcion));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(NoSerial));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(Estado));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(TipoEquipo_Id));
-            if ((TipoTecnologiaConexion_Id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(TipoTecnologiaConexion_Id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(TipoEquipo_Id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Marca_Id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Modelo_Id));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(TipoConexion_Id));
-            if ((TipoEquipo_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(TipoEquipo_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Marca_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Modelo_Id));
-            if ((Marca_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Marca_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Modelo_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Modelo_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_NoSerial));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Estado));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_NoSerial));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_TipoEquipo_Id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Marca_Id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Modelo_Id));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_TipoConexion_Id));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_Estado));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_TipoEquipo_Id));
-            if ((Original_TipoTecnologiaConexion_Id.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_TipoTecnologiaConexion_Id.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_TipoConexion_Id));
-            if ((Original_TipoEquipo_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_TipoEquipo_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Marca_Id));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Modelo_Id));
-            if ((Original_Marca_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Marca_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Modelo_Id1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Modelo_Id1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1481,30 +1149,8 @@ SELECT Id, Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Descripcion, 
-                    int NoSerial, 
-                    bool Estado, 
-                    int TipoEquipo_Id, 
-                    global::System.Nullable<int> TipoTecnologiaConexion_Id, 
-                    int TipoConexion_Id, 
-                    global::System.Nullable<int> TipoEquipo_Id1, 
-                    int Marca_Id, 
-                    int Modelo_Id, 
-                    global::System.Nullable<int> Marca_Id1, 
-                    global::System.Nullable<int> Modelo_Id1, 
-                    int Original_Id, 
-                    int Original_NoSerial, 
-                    bool Original_Estado, 
-                    int Original_TipoEquipo_Id, 
-                    global::System.Nullable<int> Original_TipoTecnologiaConexion_Id, 
-                    int Original_TipoConexion_Id, 
-                    global::System.Nullable<int> Original_TipoEquipo_Id1, 
-                    int Original_Marca_Id, 
-                    int Original_Modelo_Id, 
-                    global::System.Nullable<int> Original_Marca_Id1, 
-                    global::System.Nullable<int> Original_Modelo_Id1) {
-            return this.Update(Descripcion, NoSerial, Estado, TipoEquipo_Id, TipoTecnologiaConexion_Id, TipoConexion_Id, TipoEquipo_Id1, Marca_Id, Modelo_Id, Marca_Id1, Modelo_Id1, Original_Id, Original_NoSerial, Original_Estado, Original_TipoEquipo_Id, Original_TipoTecnologiaConexion_Id, Original_TipoConexion_Id, Original_TipoEquipo_Id1, Original_Marca_Id, Original_Modelo_Id, Original_Marca_Id1, Original_Modelo_Id1, Original_Id);
+        public virtual int Update(string Descripcion, int NoSerial, int TipoEquipo_Id, int Marca_Id, int Modelo_Id, int TipoConexion_Id, bool Estado, int Original_Id, int Original_NoSerial, int Original_TipoEquipo_Id, int Original_Marca_Id, int Original_Modelo_Id, int Original_TipoConexion_Id, bool Original_Estado) {
+            return this.Update(Descripcion, NoSerial, TipoEquipo_Id, Marca_Id, Modelo_Id, TipoConexion_Id, Estado, Original_Id, Original_NoSerial, Original_TipoEquipo_Id, Original_Marca_Id, Original_Modelo_Id, Original_TipoConexion_Id, Original_Estado, Original_Id);
         }
     }
     
