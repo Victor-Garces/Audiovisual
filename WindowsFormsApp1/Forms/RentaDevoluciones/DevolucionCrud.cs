@@ -17,22 +17,31 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            using (var context = new DianaContext())
+            if (string.IsNullOrWhiteSpace(txtComentario.Text))
             {
-                _rentaDevolucion.Comentario = txtComentario.Text;
-                _rentaDevolucion.Estado = true;
-                _rentaDevolucion.FechaDevolucion = dtFechaDevolucion.Value;
-                context.Entry(_rentaDevolucion).State = EntityState.Modified;
-                context.SaveChanges();
+                string errorMessage = "Faltan datos";
+                string errorTitle = "Error";
+                MessageBox.Show(errorMessage, errorTitle);
             }
+            else
+            {
+                using (var context = new DianaContext())
+                {
+                    _rentaDevolucion.Comentario = txtComentario.Text;
+                    _rentaDevolucion.Estado = true;
+                    _rentaDevolucion.FechaDevolucion = dtFechaDevolucion.Value;
+                    context.Entry(_rentaDevolucion).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
 
-            var rentaDevolucionesLista = new RentaDevolucionesLista();
-            rentaDevolucionesLista.Show();
-            Hide();
+                var rentaDevolucionesLista = new RentaDevolucionesLista();
+                rentaDevolucionesLista.Show();
+                Hide();
 
-            string message = "Devolución exitosa";
-            string title = "Exito";
-            MessageBox.Show(message, title);
+                string message = "Devolución exitosa";
+                string title = "Exito";
+                MessageBox.Show(message, title);
+            }
         }
 
         private void button4_Click(object sender, System.EventArgs e)

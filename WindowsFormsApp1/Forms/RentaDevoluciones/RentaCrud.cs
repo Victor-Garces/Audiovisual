@@ -39,19 +39,29 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
                 Usuario_Id = (int) cmbUsuarios.SelectedValue
             };
 
-            using (var context = new DianaContext())
+            if (cmbEmpleados.SelectedValue == null || cmbEquipos.SelectedValue == null ||
+                cmbUsuarios.SelectedValue == null)
             {
-                context.RentaDevoluciones.Add(renta);
-                context.SaveChanges();
+                string errorMessage = "Faltan datos";
+                string errorTitle = "Error";
+                MessageBox.Show(errorMessage, errorTitle);
             }
+            else
+            {
+                using (var context = new DianaContext())
+                {
+                    context.RentaDevoluciones.Add(renta);
+                    context.SaveChanges();
+                }
 
-            var rentaDevolucionesLista = new RentaDevolucionesLista();
-            rentaDevolucionesLista.Show();
-            Hide();
+                var rentaDevolucionesLista = new RentaDevolucionesLista();
+                rentaDevolucionesLista.Show();
+                Hide();
 
-            string message = "Renta creada";
-            string title = "Exito";
-            MessageBox.Show(message, title);
+                string message = "Renta creada";
+                string title = "Exito";
+                MessageBox.Show(message, title);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
