@@ -13,19 +13,19 @@ namespace WindowsFormsApp1.Forms.Equipos
             InitializeComponent();
             using (var context = new DianaContext())
             {
-                cmbTipoConexion.DataSource = context.TipoEquipos.ToList();
+                cmbTipoConexion.DataSource = context.TipoEquipos.Where(equipo => equipo.Estado).ToList();
                 cmbTipoConexion.DisplayMember = "descripcion";
                 cmbTipoConexion.ValueMember = "id";
 
-                cmbMarca.DataSource = context.Marcas.ToList();
+                cmbMarca.DataSource = context.Marcas.Where(equipo => equipo.Estado).ToList();
                 cmbMarca.DisplayMember = "descripcion";
                 cmbMarca.ValueMember = "id";
 
-                cmbModelo.DataSource = context.Modelos.ToList();
+                cmbModelo.DataSource = context.Modelos.Where(equipo => equipo.Estado).ToList();
                 cmbModelo.DisplayMember = "descripcion";
                 cmbModelo.ValueMember = "id";
 
-                cmbTipoEquipo.DataSource = context.TipoEquipos.ToList();
+                cmbTipoEquipo.DataSource = context.TipoEquipos.Where(equipo => equipo.Estado).ToList();
                 cmbTipoEquipo.DisplayMember = "descripcion";
                 cmbTipoEquipo.ValueMember = "id";
             }

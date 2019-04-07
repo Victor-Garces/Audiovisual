@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtFechaDevolucion = new System.Windows.Forms.DateTimePicker();
             this.txtComentario = new System.Windows.Forms.TextBox();
@@ -47,16 +46,7 @@
             this.button4.TabIndex = 70;
             this.button4.Text = "Volver a inicio";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(474, 33);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 19);
-            this.button3.TabIndex = 68;
-            this.button3.Text = "Cerrar sesión";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -121,7 +111,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtFechaDevolucion);
             this.Controls.Add(this.txtComentario);
@@ -139,7 +128,6 @@
         #endregion
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dtFechaDevolucion;
         private System.Windows.Forms.TextBox txtComentario;

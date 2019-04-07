@@ -34,5 +34,12 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
             string title = "Exito";
             MessageBox.Show(message, title);
         }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            var main = new Main();
+            main.Show();
+            Hide();
+        }
     }
 }

@@ -13,15 +13,15 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
             InitializeComponent();
             using (var context = new DianaContext())
             {
-                cmbEmpleados.DataSource = context.TipoEquipos.ToList();
+                cmbEmpleados.DataSource = context.TipoEquipos.Where(equipo => equipo.Estado).ToList();
                 cmbEmpleados.DisplayMember = "nombre";
                 cmbEmpleados.ValueMember = "id";
 
-                cmbEquipos.DataSource = context.Marcas.ToList();
+                cmbEquipos.DataSource = context.Marcas.Where(equipo => equipo.Estado).ToList();
                 cmbEquipos.DisplayMember = "descripcion";
                 cmbEquipos.ValueMember = "id";
 
-                cmbUsuarios.DataSource = context.Modelos.ToList();
+                cmbUsuarios.DataSource = context.Modelos.Where(equipo => equipo.Estado).ToList();
                 cmbUsuarios.DisplayMember = "descripcion";
                 cmbUsuarios.ValueMember = "id";
             }
@@ -52,6 +52,13 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
             string message = "Renta creada";
             string title = "Exito";
             MessageBox.Show(message, title);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var main = new Main();
+            main.Show();
+            Hide();
         }
     }
 }

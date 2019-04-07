@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.Forms.Modelos
             InitializeComponent();
             using (var context = new DianaContext())
             {
-                cmbMarca.DataSource = context.Marcas.ToList();
+                cmbMarca.DataSource = context.Marcas.Where(equipo => equipo.Estado).ToList();
                 cmbMarca.DisplayMember = "descripcion";
                 cmbMarca.ValueMember = "id";
             }
