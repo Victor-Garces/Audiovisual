@@ -23,5 +23,12 @@ namespace WindowsFormsApp1.Forms.Equipos
             this.equiposTableAdapter.Fill(this.aUDIOVISUALDataSet2.Equipos);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var equipoCrud = new EquipoCrud();
+            equipoCrud.Show();
+            Hide();
+        }
     }
 }

@@ -39,16 +39,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNoSerial = new System.Windows.Forms.TextBox();
+            this.txtServiceTag = new System.Windows.Forms.TextBox();
+            this.cmbTipoEquipo = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.cmbModelo = new System.Windows.Forms.ComboBox();
+            this.cmbTipoConexion = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -152,66 +152,58 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Estado";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtDescripcion.Location = new System.Drawing.Point(120, 119);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(256, 20);
+            this.txtDescripcion.TabIndex = 11;
             // 
-            // textBox2
+            // txtNoSerial
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(256, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtNoSerial.Location = new System.Drawing.Point(120, 145);
+            this.txtNoSerial.Name = "txtNoSerial";
+            this.txtNoSerial.Size = new System.Drawing.Size(256, 20);
+            this.txtNoSerial.TabIndex = 12;
             // 
-            // textBox3
+            // txtServiceTag
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(256, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtServiceTag.Location = new System.Drawing.Point(120, 171);
+            this.txtServiceTag.Name = "txtServiceTag";
+            this.txtServiceTag.Size = new System.Drawing.Size(256, 20);
+            this.txtServiceTag.TabIndex = 13;
             // 
-            // comboBox1
+            // cmbTipoEquipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cmbTipoEquipo.FormattingEnabled = true;
+            this.cmbTipoEquipo.Location = new System.Drawing.Point(120, 197);
+            this.cmbTipoEquipo.Name = "cmbTipoEquipo";
+            this.cmbTipoEquipo.Size = new System.Drawing.Size(256, 21);
+            this.cmbTipoEquipo.TabIndex = 15;
             // 
-            // comboBox2
+            // cmbMarca
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(120, 225);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(256, 21);
-            this.comboBox2.TabIndex = 16;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(120, 225);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(256, 21);
+            this.cmbMarca.TabIndex = 16;
             // 
-            // comboBox3
+            // cmbModelo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(120, 252);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(256, 21);
-            this.comboBox3.TabIndex = 17;
+            this.cmbModelo.FormattingEnabled = true;
+            this.cmbModelo.Location = new System.Drawing.Point(120, 252);
+            this.cmbModelo.Name = "cmbModelo";
+            this.cmbModelo.Size = new System.Drawing.Size(256, 21);
+            this.cmbModelo.TabIndex = 17;
             // 
-            // comboBox4
+            // cmbTipoConexion
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(120, 279);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(256, 21);
-            this.comboBox4.TabIndex = 18;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(120, 303);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(256, 21);
-            this.comboBox5.TabIndex = 19;
+            this.cmbTipoConexion.FormattingEnabled = true;
+            this.cmbTipoConexion.Location = new System.Drawing.Point(120, 279);
+            this.cmbTipoConexion.Name = "cmbTipoConexion";
+            this.cmbTipoConexion.Size = new System.Drawing.Size(256, 21);
+            this.cmbTipoConexion.TabIndex = 18;
             // 
             // button3
             // 
@@ -221,6 +213,7 @@
             this.button3.TabIndex = 20;
             this.button3.Text = "Crear equipo";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -231,21 +224,30 @@
             this.button4.Text = "Ver quipos actuales";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // chkStatus
+            // 
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Location = new System.Drawing.Point(120, 307);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(15, 14);
+            this.chkStatus.TabIndex = 22;
+            this.chkStatus.UseVisualStyleBackColor = true;
+            // 
             // EquipoCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbTipoConexion);
+            this.Controls.Add(this.cmbModelo);
+            this.Controls.Add(this.cmbMarca);
+            this.Controls.Add(this.cmbTipoEquipo);
+            this.Controls.Add(this.txtServiceTag);
+            this.Controls.Add(this.txtNoSerial);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -278,15 +280,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNoSerial;
+        private System.Windows.Forms.TextBox txtServiceTag;
+        private System.Windows.Forms.ComboBox cmbTipoEquipo;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.ComboBox cmbModelo;
+        private System.Windows.Forms.ComboBox cmbTipoConexion;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox chkStatus;
     }
 }
