@@ -137,6 +137,25 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if ((TipoAlquiler)cmbTipo.SelectedValue == TipoAlquiler.Renta)
+            {
+                var bindingSource = new BindingSource
+                {
+                    DataSource = dataGridView1.DataSource,
+                    Filter = "Estado = false"
+                };
+                dataGridView1.DataSource = bindingSource;
+            }
+            else
+            {
+                var bindingSource = new BindingSource
+                {
+                    DataSource = dataGridView1.DataSource,
+                    Filter = "Estado = true"
+                };
+                dataGridView1.DataSource = bindingSource;
+            }
+
             try
             {
                 StreamWriter csvFileWriter = new StreamWriter(ruta, false);
@@ -169,9 +188,8 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
                         for (int i = 1; i <= countColumn; i++)
                         {
                             dataFromGrid = dataFromGrid + ',' + dataRowObject.Cells[i].Value.ToString();
-
-                            csvFileWriter.WriteLine(dataFromGrid);
                         }
+                        csvFileWriter.WriteLine(dataFromGrid);
                     }
                 }
 
