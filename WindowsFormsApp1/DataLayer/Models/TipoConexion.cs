@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DataLayer.Models
 {
+    [Table("TipoConexiones")]
     public class TipoConexion
     {
         public int Id { get; set; }

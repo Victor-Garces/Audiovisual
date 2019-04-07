@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WindowsFormsApp1.DataLayer.Models
 {
+    [Table("RentaDevoluciones")]
     public class RentaDevolucion
     {
         public int Id { get; set; }

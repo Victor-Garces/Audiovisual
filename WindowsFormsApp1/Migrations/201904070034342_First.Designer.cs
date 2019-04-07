@@ -7,13 +7,13 @@ namespace WindowsFormsApp1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddEquiposTable : IMigrationMetadata
+    public sealed partial class First : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddEquiposTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(First));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904020051491_AddEquiposTable"; }
+            get { return "201904070034342_First"; }
         }
         
         string IMigrationMetadata.Source

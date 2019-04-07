@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.DataLayer.Models
 {
+    [Table("TipoEquipos")]
     public class TipoEquipo
     {
         public int Id { get; set; }

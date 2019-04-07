@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using WindowsFormsApp1.DataLayer.Enums;
 
 namespace WindowsFormsApp1.DataLayer.Models
 {
+    [Table("Empleados")]
     public sealed class Empleado
     {
         public int Id { get; set; }

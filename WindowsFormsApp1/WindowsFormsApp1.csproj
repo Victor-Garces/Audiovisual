@@ -209,41 +209,9 @@
     <Compile Include="Forms\Usuario\UsuarioLista.Designer.cs">
       <DependentUpon>UsuarioLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201903140316478_FirstMigration.cs" />
-    <Compile Include="Migrations\201903140316478_FirstMigration.Designer.cs">
-      <DependentUpon>201903140316478_FirstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs" />
-    <Compile Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.Designer.cs">
-      <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903161531313_AddedNoCarnetToUserTable.cs" />
-    <Compile Include="Migrations\201903161531313_AddedNoCarnetToUserTable.Designer.cs">
-      <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904020051491_AddEquiposTable.cs" />
-    <Compile Include="Migrations\201904020051491_AddEquiposTable.Designer.cs">
-      <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904020105466_AddMarcasTable.cs" />
-    <Compile Include="Migrations\201904020105466_AddMarcasTable.Designer.cs">
-      <DependentUpon>201904020105466_AddMarcasTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904050005472_CreateEquipoLista.cs" />
-    <Compile Include="Migrations\201904050005472_CreateEquipoLista.Designer.cs">
-      <DependentUpon>201904050005472_CreateEquipoLista.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904050031159_CreateModelo.cs" />
-    <Compile Include="Migrations\201904050031159_CreateModelo.Designer.cs">
-      <DependentUpon>201904050031159_CreateModelo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904050034173_AddedModelsTable.cs" />
-    <Compile Include="Migrations\201904050034173_AddedModelsTable.Designer.cs">
-      <DependentUpon>201904050034173_AddedModelsTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904050045596_CreateTipoConexion.cs" />
-    <Compile Include="Migrations\201904050045596_CreateTipoConexion.Designer.cs">
-      <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
+    <Compile Include="Migrations\201904070034342_First.cs" />
+    <Compile Include="Migrations\201904070034342_First.Designer.cs">
+      <DependentUpon>201904070034342_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -299,32 +267,8 @@
     <EmbeddedResource Include="Forms\Usuario\UsuarioLista.resx">
       <DependentUpon>UsuarioLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903140316478_FirstMigration.resx">
-      <DependentUpon>201903140316478_FirstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903161506138_AddedUserTypeAndPersonTypeToUserTable.resx">
-      <DependentUpon>201903161506138_AddedUserTypeAndPersonTypeToUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903161531313_AddedNoCarnetToUserTable.resx">
-      <DependentUpon>201903161531313_AddedNoCarnetToUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904020051491_AddEquiposTable.resx">
-      <DependentUpon>201904020051491_AddEquiposTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904020105466_AddMarcasTable.resx">
-      <DependentUpon>201904020105466_AddMarcasTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904050005472_CreateEquipoLista.resx">
-      <DependentUpon>201904050005472_CreateEquipoLista.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904050031159_CreateModelo.resx">
-      <DependentUpon>201904050031159_CreateModelo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904050034173_AddedModelsTable.resx">
-      <DependentUpon>201904050034173_AddedModelsTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904050045596_CreateTipoConexion.resx">
-      <DependentUpon>201904050045596_CreateTipoConexion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904070034342_First.resx">
+      <DependentUpon>201904070034342_First.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
