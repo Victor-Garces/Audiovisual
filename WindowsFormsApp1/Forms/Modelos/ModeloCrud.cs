@@ -21,6 +21,14 @@ namespace WindowsFormsApp1.Forms.Modelos
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (Form1.usuario.IsAdmin != true)
+            {
+                string asd = "Usted no tiene permisos para crear usuarios";
+                string zxc = "Error";
+                MessageBox.Show(asd, zxc);
+                return;
+            }
+
             var modelo = new Modelo
             {
                 Descripcion = txtDescripcion.Text,
@@ -46,6 +54,20 @@ namespace WindowsFormsApp1.Forms.Modelos
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var main = new Main();
+            main.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+            Hide();
         }
     }
 }

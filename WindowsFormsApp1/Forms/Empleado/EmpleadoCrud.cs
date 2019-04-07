@@ -158,5 +158,10 @@ namespace WindowsFormsApp1.Forms
                 textBox6.Text = textBox6.Text.Remove(textBox6.Text.Length - 1);
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

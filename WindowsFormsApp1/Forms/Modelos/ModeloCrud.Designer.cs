@@ -49,6 +49,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Volver a inicio";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -58,6 +59,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Cerrar sesion";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -105,6 +107,7 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(99, 149);
             this.cmbMarca.Name = "cmbMarca";

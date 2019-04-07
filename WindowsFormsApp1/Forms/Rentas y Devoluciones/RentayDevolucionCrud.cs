@@ -21,5 +21,10 @@ namespace WindowsFormsApp1.Forms.Rentas_y_Devoluciones
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -50,5 +50,21 @@ namespace WindowsFormsApp1.Forms.RentaDevoluciones
             main.Show();
             Hide();
         }
+
+        private void button4_Click(object sender, System.EventArgs e)
+        {
+            var main = new Main();
+            main.Show();
+            Hide();
+
+
+        }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+            var form1 = new Form1();
+            form1.Show();
+            Hide();
+        }
     }
 }

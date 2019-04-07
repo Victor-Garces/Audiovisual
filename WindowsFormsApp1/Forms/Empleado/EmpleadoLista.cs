@@ -26,6 +26,14 @@ namespace WindowsFormsApp1.Forms.Empleado
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Form1.usuario.IsAdmin != true)
+            {
+                string asd = "Usted no tiene permisos para crear usuarios";
+                string zxc = "Error";
+                MessageBox.Show(asd, zxc);
+                return;
+            }
+
             var empleadoCrud = new EmpleadoCrud();
             empleadoCrud.Show();
             Hide();
@@ -46,6 +54,11 @@ namespace WindowsFormsApp1.Forms.Empleado
                 Filter = "Nombre" + " like '%" + textBox1.Text + "%'"
             };
             dataGridView1.DataSource = bindingSource;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -79,6 +79,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Cerrar sesión";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -176,6 +177,7 @@
             // 
             // cmbTipoEquipo
             // 
+            this.cmbTipoEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoEquipo.FormattingEnabled = true;
             this.cmbTipoEquipo.Location = new System.Drawing.Point(120, 197);
             this.cmbTipoEquipo.Name = "cmbTipoEquipo";
@@ -184,6 +186,7 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(120, 225);
             this.cmbMarca.Name = "cmbMarca";
@@ -192,6 +195,7 @@
             // 
             // cmbModelo
             // 
+            this.cmbModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModelo.FormattingEnabled = true;
             this.cmbModelo.Location = new System.Drawing.Point(120, 252);
             this.cmbModelo.Name = "cmbModelo";
@@ -200,11 +204,13 @@
             // 
             // cmbTipoConexion
             // 
+            this.cmbTipoConexion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoConexion.FormattingEnabled = true;
             this.cmbTipoConexion.Location = new System.Drawing.Point(120, 279);
             this.cmbTipoConexion.Name = "cmbTipoConexion";
             this.cmbTipoConexion.Size = new System.Drawing.Size(256, 21);
             this.cmbTipoConexion.TabIndex = 18;
+            this.cmbTipoConexion.SelectedIndexChanged += new System.EventHandler(this.cmbTipoConexion_SelectedIndexChanged);
             // 
             // button3
             // 

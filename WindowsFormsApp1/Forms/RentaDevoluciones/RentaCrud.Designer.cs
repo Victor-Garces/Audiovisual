@@ -99,6 +99,7 @@
             this.cmbEmpleados.Size = new System.Drawing.Size(127, 21);
             this.cmbEmpleados.TabIndex = 53;
             // 
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(44, 238);
@@ -114,6 +115,7 @@
             // 
             this.dtFechaPrestamo.Location = new System.Drawing.Point(152, 187);
             this.dtFechaPrestamo.Margin = new System.Windows.Forms.Padding(2);
+            this.dtFechaPrestamo.MinDate = new System.DateTime(2019, 4, 7, 0, 0, 0, 0);
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
             this.dtFechaPrestamo.Size = new System.Drawing.Size(151, 20);
             this.dtFechaPrestamo.TabIndex = 48;
