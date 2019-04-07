@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using WindowsFormsApp1.Forms.Empleado;
 using WindowsFormsApp1.Forms.Equipos;
 using WindowsFormsApp1.Forms.Modelos;
+using WindowsFormsApp1.Forms.RentaDevoluciones;
 using WindowsFormsApp1.Forms.Tipo_Conexiones;
 using WindowsFormsApp1.Forms.Tipo_Equipo;
 using WindowsFormsApp1.Forms.Usuario;
@@ -72,6 +73,13 @@ namespace WindowsFormsApp1.Forms
             TipoConexionLista.Show();
             Hide();
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var rentaDevolucionesLista = new RentaDevolucionesLista();
+            rentaDevolucionesLista.Show();
+            Hide();
         }
     }
 }

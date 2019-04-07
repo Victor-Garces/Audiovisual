@@ -93,8 +93,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AUDIOVISUALDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AUDIOVISUALDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AUDIOVISUALDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer\DianaContext.cs" />
     <Compile Include="DataLayer\Enums\Tanda.cs" />
+    <Compile Include="DataLayer\Enums\TipoAlquiler.cs" />
     <Compile Include="DataLayer\Enums\TipoEquipo.cs" />
     <Compile Include="DataLayer\Enums\TipoPersona.cs" />
     <Compile Include="DataLayer\Enums\TipoTecnologiaConexion.cs" />
@@ -167,6 +173,12 @@
     <Compile Include="Forms\Modelos\ModeloLista.Designer.cs">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RentaDevoluciones\RentaDevolucionesLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RentaDevoluciones\RentaDevolucionesLista.Designer.cs">
+      <DependentUpon>RentaDevolucionesLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Rentas y Devoluciones\RentayDevolucionCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,10 @@
     <Compile Include="Migrations\201904070056444_First.Designer.cs">
       <DependentUpon>201904070056444_First.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904070210482_AddedRentaDevolucionesTable.cs" />
+    <Compile Include="Migrations\201904070210482_AddedRentaDevolucionesTable.Designer.cs">
+      <DependentUpon>201904070210482_AddedRentaDevolucionesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -246,6 +262,9 @@
     <EmbeddedResource Include="Forms\Modelos\ModeloLista.resx">
       <DependentUpon>ModeloLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RentaDevoluciones\RentaDevolucionesLista.resx">
+      <DependentUpon>RentaDevolucionesLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Rentas y Devoluciones\RentayDevolucionCrud.resx">
       <DependentUpon>RentayDevolucionCrud.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904070056444_First.resx">
       <DependentUpon>201904070056444_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904070210482_AddedRentaDevolucionesTable.resx">
+      <DependentUpon>201904070210482_AddedRentaDevolucionesTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -355,6 +377,17 @@
     </None>
     <None Include="AUDIOVISUALDataSet6.xss">
       <DependentUpon>AUDIOVISUALDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet7.xsc">
+      <DependentUpon>AUDIOVISUALDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="AUDIOVISUALDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AUDIOVISUALDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AUDIOVISUALDataSet7.xss">
+      <DependentUpon>AUDIOVISUALDataSet7.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
