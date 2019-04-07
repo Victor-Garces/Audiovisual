@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aUDIOVISUALDataSet5 = new WindowsFormsApp1.AUDIOVISUALDataSet5();
-            this.modelosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.modelosTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet5TableAdapters.ModelosTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.marcaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUDIOVISUALDataSet5 = new WindowsFormsApp1.AUDIOVISUALDataSet5();
+            this.modelosTableAdapter = new WindowsFormsApp1.AUDIOVISUALDataSet5TableAdapters.ModelosTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -61,20 +61,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(556, 246);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // aUDIOVISUALDataSet5
-            // 
-            this.aUDIOVISUALDataSet5.DataSetName = "AUDIOVISUALDataSet5";
-            this.aUDIOVISUALDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // modelosBindingSource
-            // 
-            this.modelosBindingSource.DataMember = "Modelos";
-            this.modelosBindingSource.DataSource = this.aUDIOVISUALDataSet5;
-            // 
-            // modelosTableAdapter
-            // 
-            this.modelosTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -100,6 +86,20 @@
             this.marcaIdDataGridViewTextBoxColumn.DataPropertyName = "Marca_Id";
             this.marcaIdDataGridViewTextBoxColumn.HeaderText = "Marca_Id";
             this.marcaIdDataGridViewTextBoxColumn.Name = "marcaIdDataGridViewTextBoxColumn";
+            // 
+            // modelosBindingSource
+            // 
+            this.modelosBindingSource.DataMember = "Modelos";
+            this.modelosBindingSource.DataSource = this.aUDIOVISUALDataSet5;
+            // 
+            // aUDIOVISUALDataSet5
+            // 
+            this.aUDIOVISUALDataSet5.DataSetName = "AUDIOVISUALDataSet5";
+            this.aUDIOVISUALDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // modelosTableAdapter
+            // 
+            this.modelosTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -143,6 +143,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Crear modelo";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ModeloLista
             // 
@@ -160,8 +161,8 @@
             this.Text = "ModeloLista";
             this.Load += new System.EventHandler(this.ModeloLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUDIOVISUALDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

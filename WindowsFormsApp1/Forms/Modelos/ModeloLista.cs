@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Forms.Modelos
@@ -22,6 +15,13 @@ namespace WindowsFormsApp1.Forms.Modelos
             // TODO: This line of code loads data into the 'aUDIOVISUALDataSet5.Modelos' table. You can move, or remove it, as needed.
             this.modelosTableAdapter.Fill(this.aUDIOVISUALDataSet5.Modelos);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var modeloCrud = new ModeloCrud();
+            modeloCrud.Show();
+            Hide();
         }
     }
 }
